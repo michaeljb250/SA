@@ -4,5 +4,17 @@
 
 import { application } from "./application"
 
+import CardController from "./card_controller"
+application.register("card", CardController)
+
+import DistortionController from "./distortion_controller"
+application.register("distortion", DistortionController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)
+
+import VolsController from "./vols_controller"
+application.register("vols", VolsController)

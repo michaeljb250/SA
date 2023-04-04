@@ -1,0 +1,137 @@
+#text {
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 22px;
+}
+
+.conter {
+  padding-top: 62px;
+  padding-left: 48px;
+}
+
+.button-container button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #3e8e41;
+}
+
+.button-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#player-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#player-container button {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+#distortion {
+  width: 80%;
+  margin: 0 10px;
+  height: 2px;
+  background-color: black;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#distortion::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#distortion::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#textt-box {
+  border: 1px solid black;
+  width: 200px;
+  height: 80px;
+  position: fixed;
+  left: 80%;
+  top: 40%;
+  transform: translateX(-50%);
+}
+
+#textt {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+// #text {
+//   font-size: 24px;
+//   font-family: 'Courier New', Courier, monospace;
+//   white-space: pre-wrap;
+// }
+
+// .button-container {
+//   display: flex;
+//   margin-top: 20px;
+// }
+
+// .button-container button {
+//   background-color: black;
+//   border: none;
+//   color: white;
+//   padding: 10px 20px;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   font-size: 14px;
+//   margin-right: 10px;
+//   border-radius: 5px;
+//   cursor: pointer;
+// }
+
+// .button-container button:hover {
+//   background-color: #3e8e41;
+// }
+
+// .button-container button:disabled {
+//   opacity: 0.5;
+//   cursor: not-allowed;
+// }
