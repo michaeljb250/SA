@@ -1,0 +1,2 @@
+class Vol < ApplicationRecord
+end
