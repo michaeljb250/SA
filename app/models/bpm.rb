@@ -1,0 +1,2 @@
+class Bpm < ApplicationRecord
+end

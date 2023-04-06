@@ -1,0 +1,2 @@
+class Autowah < ApplicationRecord
+end
