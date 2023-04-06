@@ -1,0 +1,58 @@
+.reverb-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+}
+
+.reverb-slider-container {
+  width: 100%;
+  height: 50px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.reverb-slider-container input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.reverb-slider-container input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #222;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.reverb-slider-container input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #222;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.reverb-slider-container input[type=range]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #222;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

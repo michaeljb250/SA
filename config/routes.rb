@@ -3,6 +3,13 @@ Rails.application.routes.draw do
     resources :users
       resources :volumes
        resources :vols
+        resources :autowahs
+        resources :bpms
+         resources :synths
+          resources :reverbs
+           resources :panners
+            resources :delays
+             resources :tremelos
     end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

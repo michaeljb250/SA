@@ -1,0 +1,2 @@
+class Panner < ApplicationRecord
+end

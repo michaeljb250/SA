@@ -1,0 +1,25 @@
+<head>
+  <title>Typing Animation</title>
+  <link rel="stylesheet">
+</head>
+<body>
+<script src="https://unpkg.com/@hotwired/stimulus@3.0.0/dist/stimulus.umd.js"></script>
+ <div data-controller="reverb">
+     <h1>Tone.js Audio Player</h1>
+     <div class="conter">
+      <h1 id="text"></h1>
+      <div class="button-container">
+        <button id="back-btn">Back</button>
+        <button id="next-btn">Next</button>
+      </div>
+      <div id="textt-box">
+        <p id="textt"></p>
+      </div>
+      <div class="reverb-container">
+  <div class="reverb-slider-container">
+    <input type="range" min="0" max="1" step="0.1" value="0" id="reverbSlider">
+  </div>
+  <button id="startBtn" class="reverb-btn">Start</button>
+  <button id="stopBtn" class="reverb-btn">Stop</button>
+</div>
+</body>

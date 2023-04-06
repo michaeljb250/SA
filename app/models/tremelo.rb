@@ -1,0 +1,2 @@
+class Tremelo < ApplicationRecord
+end

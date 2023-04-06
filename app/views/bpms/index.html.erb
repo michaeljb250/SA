@@ -1,0 +1,24 @@
+<head>
+  <title>Typing Animation</title>
+  <link rel="stylesheet">
+</head>
+<body>
+<script src="https://unpkg.com/@hotwired/stimulus@3.0.0/dist/stimulus.umd.js"></script>
+ <div id="bod" data-controller="bpm">
+    <div class="conter">
+      <h1 id="text"></h1>
+      <div class="button-container">
+        <button id="back-btn">Back</button>
+        <button id="next-btn">Next</button>
+      </div>
+      <div id="textt-box">
+        <p id="textt"></p>
+      </div>
+      <button id="play">Play</button>
+
+<div>Bpm <input id="bpm" type="range" min="50" max="1000" step="1" value="200"></input></div>
+
+<div id="note"></div>
+    </div>
+  </div>
+</body>

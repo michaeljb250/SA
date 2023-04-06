@@ -4,14 +4,35 @@
 
 import { application } from "./application"
 
+import AutowahController from "./autowah_controller"
+application.register("autowah", AutowahController)
+
+import BpmController from "./bpm_controller"
+application.register("bpm", BpmController)
+
 import CardController from "./card_controller"
 application.register("card", CardController)
+
+import DelayController from "./delay_controller"
+application.register("delay", DelayController)
 
 import DistortionController from "./distortion_controller"
 application.register("distortion", DistortionController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import PannerController from "./panner_controller"
+application.register("panner", PannerController)
+
+import ReverbController from "./reverb_controller"
+application.register("reverb", ReverbController)
+
+import SynthController from "./synth_controller"
+application.register("synth", SynthController)
+
+import TremeloController from "./tremelo_controller"
+application.register("tremelo", TremeloController)
 
 import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)

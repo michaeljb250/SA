@@ -1,0 +1,38 @@
+.delay-button {
+  background-color: pink; /* Green background color */
+  border: none; /* Remove borders */
+  color: white; /* White text color */
+  padding: 15px 32px; /* Set padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make it an inline element */
+  font-size: 16px; /* Set font size */
+  margin: 4px 2px; /* Add some margin */
+  cursor: pointer; /* Change cursor to pointer */
+  border-radius: 25px;
+  box-shadow: 0 5px beige; /* Add shadow */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* On mouse-over */
+.delay-button:hover {
+  background-color: beige;
+}
+
+/* On mouse-down */
+.delay-button:active {
+  background-color: beige;
+  box-shadow: 0 5px beige;
+  transform: translateY(4px);
+}
+
+.button-pos {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,8 @@
+.bod {
+  background-color: var(--bg-color);
+  transition: background-color linear 1s;
+}
+
+:root {
+  --bg-color: #fff;
+}
