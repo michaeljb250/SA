@@ -10,6 +10,19 @@ Rails.application.routes.draw do
            resources :panners
             resources :delays
              resources :tremelos
+              resources :eqs
+               resources :compressors
+                resources :jcverbs
+                 resources :adsrs
+                  resources :limiters
+                   resources :phasers
+                    resources :passs
+                     resources :homes
+                      resources :vibratos
+                       resources :chorus
+                        resources :pings
+                         resources :multibands
+                          resources :freeverbs
     end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

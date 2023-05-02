@@ -1,0 +1,2 @@
+class ChorusController < ApplicationController
+end

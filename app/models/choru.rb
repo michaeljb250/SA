@@ -1,0 +1,2 @@
+class Choru < ApplicationRecord
+end

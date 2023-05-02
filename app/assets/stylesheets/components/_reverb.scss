@@ -56,3 +56,72 @@
   margin-top: -10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
+
+.first {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 60px;
+  color: black;
+  background-color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.second {
+  padding: 50px;
+   max-width: 50%;
+   background: white;
+   text-decoration: underline;
+   text-decoration-color: white;
+   color: #222;
+}
+
+.third {
+  border-style: solid;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 4rem;
+  letter-spacing: 0.04rem;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+  border-radius: .4rem;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  padding: 5px;
+  background: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: ease-in;
+    mix-blend-mode: difference;
+    //Gradient start values are somewhat arbitrary. But this seemed a good fit to avoid overly-blurry circle edge.
+    background: white;
+    border: black;
+    border-style: solid;
+    text-decoration: underline;
+    text-decoration-color: white;
+    color: #222;
+  }
+
+  box-shadow: black;
+  &:active {
+    top: 5px;
+    box-shadow: none;
+    border: #222;
+    border-style: solid;
+    text-decoration: underline;
+    text-decoration-color: white;
+  }
+}

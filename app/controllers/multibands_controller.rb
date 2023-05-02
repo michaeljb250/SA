@@ -1,0 +1,2 @@
+class MultibandsController < ApplicationController
+end

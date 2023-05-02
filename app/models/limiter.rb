@@ -1,0 +1,2 @@
+class Limiter < ApplicationRecord
+end

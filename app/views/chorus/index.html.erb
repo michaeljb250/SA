@@ -1,0 +1,55 @@
+<style>
+#chorusSlider {
+  width: 80%;
+  margin: 0 10px;
+  height: 2px;
+  background-color: black;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#chorusSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#chorusSlider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--bg-color);
+  transition: background-color linear 1s;
+}
+
+:root {
+  --bg-color: #fff;
+}
+</style>
+<h1>Tone.js Audio Player with Chorus Effect</h1>
+<div data-controller="choru">
+<h1>Tone.js Audio Player</h1>
+   <div class="conter">
+    <h1 id="text"></h1>
+    <div class="button-container">
+      <button id="back-btn">Back</button>
+      <button id="next-btn">Next</button>
+    </div>
+    <div id="textt-box">
+      <p id="textt"></p>
+    </div>
+    <div id="player-container">
+  <button id="startButton">&#9658;</button>
+  <button id="stopButton">&#9724;</button>
+  <label for="chorusSlider"></label>
+  <input type="range" id="chorusSlider" min="0" max="1" step="0.01" value="0.5">
+</div>
+</div>
