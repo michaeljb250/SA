@@ -1,10 +1,21 @@
+<style>
+body {
+  background-color: var(--bg-color);
+  transition: background-color linear 1s;
+}
+
+:root {
+  --bg-color: #fff;
+}
+
+</style>
 <head>
   <title>Typing Animation</title>
   <link rel="stylesheet">
 </head>
 <body>
-<script src="https://unpkg.com/@hotwired/stimulus@3.0.0/dist/stimulus.umd.js"></script>
- <div id="bod" data-controller="bpm">
+<div data-controller="bpm">
+ <div id="bod">
     <div class="conter">
       <h1 id="text"></h1>
       <div class="button-container">
@@ -15,10 +26,9 @@
         <p id="textt"></p>
       </div>
       <button id="play">Play</button>
-
-<div>Bpm <input id="bpm" type="range" min="50" max="1000" step="1" value="200"></input></div>
-
-<div id="note"></div>
+  <div>Bpm <input id="bpm" type="range" min="50" max="1000" step="1" value="200"></input></div>
+  <div id="note"></div>
     </div>
   </div>
+</div>
 </body>

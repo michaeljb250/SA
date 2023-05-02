@@ -1,0 +1,2 @@
+class FreeverbsController < ApplicationController
+end

@@ -81,6 +81,32 @@
   cursor: pointer;
 }
 
+#phaser-slider {
+  width: 80%;
+  margin: 0 10px;
+  height: 2px;
+  background-color: black;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#phaser-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#phaser-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 #textt-box {
   border: 1px solid black;
   width: 200px;

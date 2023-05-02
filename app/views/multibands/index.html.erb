@@ -1,0 +1,89 @@
+<html>
+<style>
+body {
+  background-color: #eee;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+button {
+  background-color: pink;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+label {
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  height: 10px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: pink;
+  border: none;
+  border-radius: 50%;
+  height: 20px;
+  margin-top: -5px;
+  width: 20px;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+</style>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tone.js Audio Player with Multiband Compressor</title>
+  </head>
+  <body>
+  <div data-controller="multiband">
+  <div class="conter">
+  <h1 id="text"></h1>
+  <div class="button-container">
+    <button id="back-btn">Back</button>
+    <button id="next-btn">Next</button>
+  </div>
+  <div id="textt-box">
+    <p id="textt"></p>
+  </div>
+    <div class="button-pos">
+    <div>
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+    <div>
+      <label for="lowSlider">Low Threshold:</label>
+      <input type="range" min="-100" max="0" step="0.1" value="-24" id="lowSlider">
+      <label for="highSlider">High Threshold:</label>
+      <input type="range" min="-100" max="0" step="0.1" value="-12" id="highSlider">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <script src="player.js"></script>
+  </div>
+</div>
+  </body>
+</html>

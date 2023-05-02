@@ -1,0 +1,2 @@
+class Eq < ApplicationRecord
+end

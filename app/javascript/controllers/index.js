@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import AdsrController from "./adsr_controller"
+application.register("adsr", AdsrController)
+
 import AutowahController from "./autowah_controller"
 application.register("autowah", AutowahController)
 
@@ -13,17 +16,53 @@ application.register("bpm", BpmController)
 import CardController from "./card_controller"
 application.register("card", CardController)
 
+import ChoruController from "./choru_controller"
+application.register("choru", ChoruController)
+
+import CompressorController from "./compressor_controller"
+application.register("compressor", CompressorController)
+
 import DelayController from "./delay_controller"
 application.register("delay", DelayController)
 
 import DistortionController from "./distortion_controller"
 application.register("distortion", DistortionController)
 
+import EqController from "./eq_controller"
+application.register("eq", EqController)
+
+import FreeverbController from "./freeverb_controller"
+application.register("freeverb", FreeverbController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import HomeController from "./home_controller"
+application.register("home", HomeController)
+
+import JcverbController from "./jcverb_controller"
+application.register("jcverb", JcverbController)
+
+import LimiterController from "./limiter_controller"
+application.register("limiter", LimiterController)
+
+import MultibandController from "./multiband_controller"
+application.register("multiband", MultibandController)
+
+import PageController from "./page_controller"
+application.register("page", PageController)
+
 import PannerController from "./panner_controller"
 application.register("panner", PannerController)
+
+import PassController from "./pass_controller"
+application.register("pass", PassController)
+
+import PhaserController from "./phaser_controller"
+application.register("phaser", PhaserController)
+
+import PingController from "./ping_controller"
+application.register("ping", PingController)
 
 import ReverbController from "./reverb_controller"
 application.register("reverb", ReverbController)
@@ -36,6 +75,9 @@ application.register("tremelo", TremeloController)
 
 import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)
+
+import VibratoController from "./vibrato_controller"
+application.register("vibrato", VibratoController)
 
 import VolsController from "./vols_controller"
 application.register("vols", VolsController)

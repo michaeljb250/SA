@@ -1,0 +1,2 @@
+class Vibrato < ApplicationRecord
+end

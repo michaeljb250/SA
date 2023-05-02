@@ -1,0 +1,2 @@
+class Freeverb < ApplicationRecord
+end

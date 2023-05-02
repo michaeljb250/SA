@@ -1,0 +1,91 @@
+<html>
+<style>
+body {
+  background-color: pink;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: #1abc9c;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #16a085;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+label {
+  margin-left: 10px;
+}
+
+</style>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/tone"></script>
+  </head>
+  <body>
+  <div data-controller="ping">
+  <div class="conter">
+      <h1 id="text"></h1>
+      <div class="button-container">
+        <button id="back-btn">Back</button>
+        <button id="next-btn">Next</button>
+      </div>
+      <div id="textt-box">
+        <p id="textt"></p>
+      </div>
+  <div class="button-pos">
+    <div class="container">
+      <div class="player">
+        <button id="playButton">Play</button>
+        <button id="stopButton" disabled>Stop</button>
+        <div class="toggle">
+          <input type="checkbox" id="pingPongCheckbox">
+          <label for="pingPongCheckbox">Enable Ping Pong Delay</label>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="app.js"></script>
+  </div>
+  </body>
+</html>

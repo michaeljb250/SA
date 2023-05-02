@@ -1,17 +1,134 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p><span data-controller="typed-js"></span></p>
-
 <head>
   <title>Typing Animation</title>
   <link rel="stylesheet">
 </head>
-<body>
-<div data-controller="distortion">
-  <h1 id="text"></h1>
-  <div class="button-container">
-    <button id="back-btn">Back</button>
-    <button id="next-btn">Next</button>
-  </div>
- </div>
+<style>
+
+.beckgreund {
+background-color: white;
+}
+
+.logo-container {
+  position: relative;
+  margin: 0 auto;
+  width: 280px;
+  height: 80px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.logo-letter {
+  display: inline-block;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 60px;
+  opacity: 0;
+}
+
+#letter1 {
+  animation: fadeInUp 6.1s ease-in-out 0.2s forwards;
+}
+
+#letter2 {
+  animation: fadeInUp 6.2s ease-in-out 0.3s forwards;
+}
+
+#letter3 {
+  animation: fadeInUp 6.3s ease-in-out 0.4s forwards;
+}
+
+#letter4 {
+  animation: fadeInUp 6.4s ease-in-out 0.5s forwards;
+}
+
+#letter5 {
+  animation: fadeInUp 6.5s ease-in-out 0.6s forwards;
+}
+
+#letter6 {
+  animation: fadeInUp 6s ease-in-out 0.7s forwards;
+}
+
+#letter7 {
+  animation: fadeInUp 6s ease-in-out 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#button-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.homepage-button {
+  /* your button styles here */
+}
+
+.click-animation:active {
+  transform: translateY(2px);
+}
+
+#button-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.homepage-button {
+ font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: underline;
+  text-decoration-color: beige;
+}
+
+.homepage-button:hover {
+  background-color: beige;
+}
+
+.homepage-button:active {
+  background-color: black;
+  transform: translateY(2px);
+}
+
+</style>
+<div class="beckgreund">
+ <div data-controller="page">
+  <div>
+  <div class="logo-container">
+  <div class="logo-letter" id="letter1">S</div>
+  <div class="logo-letter" id="letter2">O</div>
+  <div class="logo-letter" id="letter3">U</div>
+  <div class="logo-letter" id="letter4">N</div>
+  <div class="logo-letter" id="letter5">D</div>
+  <div class="logo-letter" id="letter6">    </div>
+  <div class="logo-letter" id="letter7">ACADEMY</div>
+    </div>
+ <div id="button-container">
+  <button id="audio-button" class="homepage-button click-animation" onclick="playAudio()">
+  <%= link_to "Click to Start!", homes_path, class: "homepage-button click-animation" %>
+  </button>
+</div>
+</div>
+</div>
 </body>

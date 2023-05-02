@@ -1,0 +1,2 @@
+class Multiband < ApplicationRecord
+end
