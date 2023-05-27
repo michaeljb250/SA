@@ -5,7 +5,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="delay"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Delay refers to a time delay between the input and output of an audio signal.",  "It can used as an effect in music production to create echoes or other time-based effects."];
 
     let index = 0;
     let textIndex = 0;
@@ -48,7 +48,7 @@ export default class extends Controller {
     type();
 
     const player = new Tone.Player({
-      url: "https://tonejs.github.io/audio/berklee/gong_1.mp3",
+      url: "/tunes/OS_MLW_85_electric_guitar_chords_sunset_Cm.wav",
       loop: true,
       autostart: false
     }).toDestination();

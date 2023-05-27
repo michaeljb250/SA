@@ -144,34 +144,31 @@ button:active {
   FUNDAMENTALS
 <div class="second">
   <div class="third">
-  <%= link_to "volume", homes_path, class: "second" %>
+  <%= link_to "Volume", vols_path, class: "second" %>
   </div>
   <div class="third">
-Gain
-  </div>
-   <div class="third">
-Pitch
+  <%= link_to "Gain", volumes_path, class: "second" %>
   </div>
 </div>
 </div>
 <div class="first">
   Level 1
 <div class="second">
-  <div class="third">
-Stereo
-  </div>
-  <div class="third">
-Analog
-  </div>
-   <div class="third">
-Panner
-  </div>
+<div class="third">
+<%= link_to "Panner", panners_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Delay", delays_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "PingPong Delay", pings_path, class: "second" %>
+</div>
 </div>
   <div class="first">
   Level 2
 <div class="second">
   <div class="third">
-High -- Mid -- Low
+  <%= link_to "High-Mid-Low", eqs_path, class: "second" %>
   </div>
   <div id="textt-box">
   <p id="textt"></p>
@@ -180,28 +177,72 @@ High -- Mid -- Low
     <div class="first">
   Level 3
 <div class="second">
-  <div class="third">
-Delay
-  </div>
-  <div class="third">
-Reverb
-  </div>
+<div class="third">
+<%= link_to "ADSR", adsrs_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Phaser", phasers_path, class: "second" %>
+</div>
 </div>
  <div class="first">
   Level 4
 <div class="second">
-  <div class="third">
-Attack
+<div class="third">
+<%= link_to "Reverb", reverbs_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Freeverb", freeverbs_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "JCVerb", jcverbs_path, class: "second" %>
+</div>
+</div>
+  <div class="first">
+  Level 5
+<div class="second">
+<div class="third">
+<%= link_to "Tremolo", tremelos_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Vibrato", vibratos_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Chorus", chorus_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Autowah", autowahs_path, class: "second" %>
+</div>
   </div>
-  <div class="third">
-Decay
-  </div>
-   <div class="third">
-Release
-  </div>
-   <div class="third">
-Sustain
-  </div>
+    <div class="first">
+  Level 6
+<div class="second">
+<div class="third">
+<%= link_to "Limiter", limiters_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Compressor", compressors_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Multiband", multibands_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Pass", passers_path, class: "second" %>
+</div>
+</div>
+<div class="first">
+Spacial Audio 1
+<div class="second">
+<div class="third">
+<%= link_to "Jazz", limiters_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Hip-Hop", compressors_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Classic Rock", multibands_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Pop", passers_path, class: "second" %>
 </div>
 </div>
 </body>

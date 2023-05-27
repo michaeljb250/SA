@@ -5,7 +5,7 @@ import * as Tone from 'tone'
 export default class extends Controller {
   connect() {
     // create Tone.js synth
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Sound volume refers to the perceived loudness of a sound.", "In guitar playing, gain is often associated with distortion. It is used to increase the amplitude of an electric guitar's signal to create a distorted, overdriven sound."];
 
     let index = 0;
     let textIndex = 0;
@@ -54,7 +54,7 @@ const synth = new Tone.Synth().toDestination();
 Tone.Destination.volume.value = -6;
 
 // load audio file
-const audioFile = new Tone.Player("https://tonejs.github.io/audio/berklee/gong_1.mp3").toDestination();
+const audioFile = new Tone.Player("/tunes/OS_ES_90_electric_guitar_melody_love_Am.wav").toDestination();
 
 // get HTML elements
 const startBtn = document.getElementById('start-btn');
@@ -74,6 +74,29 @@ volumeSlider.addEventListener('input', () => {
   const volumeValue = volumeSlider.value / 100; // convert to value between 0 and 1
   Tone.Destination.volume.rampTo(Tone.gainToDb(volumeValue), 0.1); // fade to new volume in 0.1 seconds
 });
+
+const textt = document.getElementById("textt");
+let indexx = 0;
+const textArrayy = [
+  { textt: "This is the first line of text", duration: 10000 },
+  { textt: "This is the second line of text", duration: 10000 },
+  { textt: "This is the third line of text", duration: 10000 }
+];
+
+function rotateText() {
+  textt.style.opacity = 0;
+  setTimeout(() => {
+    textt.textContent = textArrayy[indexx].textt;
+    textt.style.opacity = 1;
+  }, 1000);
+  setTimeout(() => {
+    textt.style.opacity = 0;
+  }, textArrayy[indexx].duration - 1000);
+  indexx = (indexx + 1) % textArrayy.length;
+  setTimeout(rotateText, textArrayy[indexx].duration);
+}
+
+rotateText();
 
   }
 }

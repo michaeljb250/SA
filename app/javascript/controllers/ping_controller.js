@@ -4,7 +4,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="ping"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Ping pong delay involves alternating the delay between the left and right channels to create a bouncingping pong effect.",  "Ping pong delay is commonly used in music production to create a sense of space and movement in the stereo field."];
 
     let index = 0;
     let textIndex = 0;

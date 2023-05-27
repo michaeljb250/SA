@@ -2,6 +2,48 @@
   <title>Typing Animation</title>
   <link rel="stylesheet">
 </head>
+<style>
+.slider {
+  width: 100%;
+  height: 2px;
+  margin: 10px 0;
+  background-color: #ddd;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: pink;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: pink;
+  cursor: pointer;
+}
+
+/* Style for the buttons */
+button {
+  background-color: pink;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+</style>
 <body>
 <script src="https://unpkg.com/@hotwired/stimulus@3.0.0/dist/stimulus.umd.js"></script>
  <div data-controller="vols">
@@ -14,10 +56,11 @@
       <div id="textt-box">
         <p id="textt"></p>
       </div>
+    </div>
       <div id="player-container">
         <button id="start-btn">&#9658;</button>
         <button id="stop-btn">&#9724;</button>
-        <input type="range" id="volume-slider" min="0" max="100" value="50">
+        <input class="slider" type="range" id="volume-slider" min="0" max="100" value="50">
 </div>
       </div>
     </div>

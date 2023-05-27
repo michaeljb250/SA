@@ -1,0 +1,2 @@
+class Jazz < ApplicationRecord
+end

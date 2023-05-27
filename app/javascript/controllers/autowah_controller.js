@@ -4,7 +4,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="autowah"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Autowah, also known as auto-wah, is an audio effect that automatically applies a wah-wah effect to a sound based on the input signal's dynamics. It mimics the sound of a wah-wah pedal, which is commonly used with guitars.",  "Autowah dynamically adjusts the filter frequency or resonance based on the input signal's amplitude, creating a sweeping, wah-like sound that responds to the player's playing intensity.",  " It is often used in funk, rock, and electronic music genres to add rhythmic and expressive tonal variations to instruments."];
 
     let index = 0;
     let textIndex = 0;
@@ -57,7 +57,7 @@ const autowah = new Tone.AutoWah().toDestination();
 
 // Initialize audio player and connect to autowah effect
 const player = new Tone.Player({
-    url: 'https://tonejs.github.io/audio/berklee/gong_1.mp3',
+    url: '/tunes/LEX_SF_79_guitar_loop_electric_moonwalk_Cm.wav',
     loop: true
 }).connect(autowah);
 

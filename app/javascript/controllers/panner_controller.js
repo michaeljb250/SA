@@ -5,7 +5,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="panner"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Sound panning is the distribution of sound across a stereo or multi-channel audio system.",  "It allows sounds to be placed at different positions in the stereo field, creating a sense of spatialization and depth.",  "Sound panning is used to enhance the listening experience "];
 
     let index = 0;
     let textIndex = 0;
@@ -48,7 +48,7 @@ export default class extends Controller {
     type();
 
  // Create a new Tone.js Player instance
-const player = new Tone.Player("https://tonejs.github.io/audio/berklee/gurgling_theremin_1.mp3").toDestination();
+const player = new Tone.Player("/tunes/tribal.mp3").toDestination();
 
 // Create a new Tone.js Panner instance
 const panner = new Tone.Panner(0).toDestination();
@@ -110,5 +110,9 @@ player.connect(panner);
     }
 
     rotateText();
+
+    window.onunload = function() {
+      player.stop();
+    };
   }
 }

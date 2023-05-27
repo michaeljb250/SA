@@ -2,6 +2,8 @@
 <title>Typing Animation</title>
 <link rel="stylesheet">
 </head>
+<style>
+</style>
 <body>
 <script src="https://unpkg.com/@hotwired/stimulus@3.0.0/dist/stimulus.umd.js"></script>
 <div data-controller="jcverb">
@@ -15,10 +17,10 @@
     <div id="textt-box">
       <p id="textt"></p>
     </div>
-    <div>
-    <button id="startButton">Start</button>
-    <button id="stopButton">Stop</button>
-    <button id="reverbButton">Toggle Reverb</button>
+    <div class="button-pos">
+    <button class="delay-button" id="startButton">Start</button>
+    <button class="delay-button" id="stopButton">Stop</button>
+    <button class="delay-button" id="reverbButton">Toggle Reverb</button>
     </div>
 </div>
 </body>

@@ -4,34 +4,10 @@
 </head>
 <body>
 <style>
-.release-slider {
-  width: 100%;
-  height: 2px;
-  margin: 10px 0;
-  background-color: #ddd;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.release-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  background-color: #4CAF50;
-  cursor: pointer;
-}
-
-.release-slider::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
-  background-color: #4CAF50;
-  cursor: pointer;
-}
 
 /* Style for the buttons */
 button {
-  background-color: #4CAF50;
+  background-color: pink;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -55,6 +31,31 @@ button:hover {
   align-items: center;
   height: 70vh;
 }
+
+.slider {
+  width: 100%;
+  height: 2px;
+  margin: 10px 0;
+  background-color: #ddd;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: pink;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: pink;
+  cursor: pointer;
+}
 </style>
 <script src="https://unpkg.com/@hotwired/stimulus@3.0.0/dist/stimulus.umd.js"></script>
 <div data-controller="compressor">
@@ -75,11 +76,11 @@ button:hover {
   </div>
   <div>
     <label for="attack-slider">Attack:</label>
-    <input type="range" min="0" max="1" step="0.01" value="0.1" id="attack-slider">
+    <input class="slider" type="range" min="0" max="1" step="0.01" value="0.1" id="attack-slider">
   </div>
   <div>
     <label for="release-slider">Release:</label>
-    <input type="range" min="0" max="1" step="0.01" value="0.5" id="release-slider">
+    <input class="slider" type="range" min="0" max="1" step="0.01" value="0.5" id="release-slider">
   </div>
 </div>
 </div>

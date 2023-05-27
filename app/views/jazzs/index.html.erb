@@ -1,0 +1,191 @@
+<html>
+<head>
+  <title>Howler.js Spatial Audio Example</title>
+  <link rel="stylesheet">
+</head>
+<style>
+#visualizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#marker {
+ position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker:active {
+  cursor: grabbing;
+}
+
+#start-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  background-color: pink;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#start-button:hover {
+  background-color: #3e8e41;
+}
+
+#stop-button {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  z-index: 2;
+  background-color: pink;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#stop-button:hover {
+  background-color: #c9302c;
+}
+
+#text {
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 22px;
+}
+
+.conter {
+  padding-top: 400px;
+}
+
+.button-container button {
+
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #3e8e41;
+}
+
+.button-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#visualizer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#marker-2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker-2:active {
+  cursor: grabbing;
+}
+
+#visualizer-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#marker-3 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker-3:active {
+  cursor: grabbing;
+}
+
+#visualizer-5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#marker-5 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker-5:active {
+  cursor: grabbing;
+}
+</style>
+<body>
+<div data-controller="jazz">
+ <div>
+  <div id="visualizer"></div>
+  <div id="marker"></div>
+  <div id="visualizer-2"></div>
+  <div id="marker-2"></div>
+  <div id="visualizer-3"></div>
+  <div id="marker-3"></div>
+  <button id="start-button">Start</button>
+  <button id="stop-button">Stop</button>
+  </div>
+</div>
+  <div class="conter">
+  <h1 id="text"></h1>
+  <div class="button-container">
+    <button id="back-btn">Back</button>
+    <button id="next-btn">Next</button>
+  </div>
+</div>
+</body>
+</html>

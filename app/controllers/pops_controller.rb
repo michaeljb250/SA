@@ -1,0 +1,2 @@
+class PopsController < ApplicationController
+end

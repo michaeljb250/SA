@@ -5,7 +5,7 @@ import * as Tone from 'tone'
 export default class extends Controller {
   connect() {
 
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Chorus is an audio effect that creates the illusion of multiple instruments or voices playing or singing together.",  " It adds depth and richness to a sound by duplicating the original signal, slightly detuning it, and modulating its delay and phase. This creates a thicker, more spacious sound reminiscent of a choir or ensemble.",  "Chorus effects are commonly used in music production to enhance guitars, vocals, and other instruments, giving them a wider and more immersive quality.s"];
 
     let index = 0;
     let textIndex = 0;

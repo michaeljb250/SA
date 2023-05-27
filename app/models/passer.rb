@@ -1,0 +1,2 @@
+class Passer < ApplicationRecord
+end

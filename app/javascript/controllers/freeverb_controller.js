@@ -1,11 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
 import * as Tone from 'tone'
 
-// Connects to data-controller="freeverb"
 export default class extends Controller {
   connect() {
 
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Commonly reverb features will allow you to adjust 'roomsize', replicating the echo of being in a larger or smaller space",  "Dampening refers to the reduction of sound energy or the suppression of certain frequencies to achieve a desired sound quality or to control unwanted vibrations. It is commonly used to control resonance, eliminate echoes, or mitigate excessive reverberation in a room or an audio system."];
 
     let index = 0;
     let textIndex = 0;
@@ -47,36 +46,46 @@ export default class extends Controller {
 
     type();
 
-    // Load the audio file
-const audioFile = 'https://tonejs.github.io/audio/berklee/gong_1.mp3';
-const player = new Tone.Player(audioFile).toDestination();
+// create a new freeverb effect with the default values
+const freeverb = new Tone.Freeverb().toDestination();
 
-// Create a Tone.js Freeverb effect
-const freeverb = new Tone.Freeverb();
+// set up the room size slider
+const roomsizeSlider = document.getElementById("roomsize-slider");
+roomsizeSlider.addEventListener("input", (event) => {
+  const value = parseFloat(event.target.value);
+  freeverb.roomSize.value = value;
+});
 
-// Connect the player to the freeverb effect
-player.connect(freeverb);
-freeverb.toDestination();
+// set up the dampening slider
+const dampeningSlider = document.getElementById("dampening-slider");
+dampeningSlider.addEventListener("input", (event) => {
+  const value = parseFloat(event.target.value);
+  freeverb.dampening = value;
+});
 
-// Set up the audio player
-const startButton = document.getElementById('start');
-const stopButton = document.getElementById('stop');
-const toggleEffectButton = document.getElementById('toggle-effect');
+// create a new player with the audio file
+const player = new Tone.Player("https://tonejs.github.io/audio/berklee/gong_1.mp3").connect(freeverb);
 
-startButton.addEventListener('click', () => {
+// get references to the start and stop buttons
+const startButton = document.getElementById("start-button");
+const stopButton = document.getElementById("stop-button");
+
+// add event listeners to the buttons
+startButton.addEventListener("click", () => {
+  // start playing the audio file
   player.start();
 });
 
-stopButton.addEventListener('click', () => {
+stopButton.addEventListener("click", () => {
+  // stop playing the audio file
   player.stop();
 });
 
-toggleEffectButton.addEventListener('click', () => {
-  if (freeverb.wet.value > 0) {
-    freeverb.wet.value = 0;
-  } else {
-    freeverb.wet.value = 1;
-  }
+// preload the audio file
+player.load().then(() => {
+  console.log("Audio file loaded");
+}).catch((error) => {
+  console.error("Error loading audio file:", error);
 });
 
 
@@ -102,6 +111,7 @@ function rotateText() {
 }
 
 rotateText();
+
 
   }
 }
