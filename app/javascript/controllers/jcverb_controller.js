@@ -4,7 +4,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="jcverb"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "JCverb is a reverberator which uses a combination of filters to create a distinctive sound"];
 
     let index = 0;
     let textIndex = 0;
@@ -48,7 +48,7 @@ export default class extends Controller {
 
 
 // Create the audio player
-const player = new Tone.Player("https://tonejs.github.io/audio/berklee/gurgling_theremin_1.mp3").toDestination();
+const player = new Tone.Player("/tunes/LEX_SF_79_guitar_loop_electric_moonwalk_Cm.wav").toDestination();
 
 // Create the reverb effect
 const reverb = new Tone.JCReverb().toDestination();

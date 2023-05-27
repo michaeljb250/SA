@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: "pages#home"
+  get 'tunes/:filename', to: 'tunes#audio'
     resources :users
       resources :volumes
        resources :vols
@@ -23,6 +24,10 @@ Rails.application.routes.draw do
                         resources :pings
                          resources :multibands
                           resources :freeverbs
+                           resources :passers
+                            resources :jazzs
+                             resources :rocks
+                              resources :pops
     end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

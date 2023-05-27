@@ -4,7 +4,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="limiter"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "A limiter is an audio processor used to control the peak levels of a sound signal.",  "A limiter works by reducing the gain or amplification of the audio signal when it exceeds the set threshold, preventing distortion and maintaining a more consistent and controlled output level"];
 
     let index = 0;
     let textIndex = 0;

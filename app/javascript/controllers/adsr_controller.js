@@ -5,7 +5,7 @@ import * as Tone from 'tone'
 export default class extends Controller {
   connect() {
 
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Attack, decay, sustain, release (ADSR) are the four stages of an envelope used to shape the volume of a sound over time:",  "attack is the time it takes for the sound to reach its maximum level, decay is the time it takes for the sound to decrease to a sustain level, ",  "sustain is the level the sound maintains until it is released, and release is the time it takes for the sound to fade out completely."];
 
     let index = 0;
     let textIndex = 0;

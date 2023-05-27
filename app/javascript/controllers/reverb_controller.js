@@ -5,7 +5,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="reverb"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Audio reverb is an effect that simulates the sound reflections and reverberations in a physical space.",  "It is created by adding a series of delays and filters to an audio signal to replicate the echoes and decay of sound in a room or other environment",  "Reverb is commonly used   to add depth and space to sounds, particularly vocals, drums, and other instruments."];
 
     let index = 0;
     let textIndex = 0;
@@ -47,10 +47,10 @@ export default class extends Controller {
 
     type();
 
-   // create a new Tone.js player instance
+// create a new Tone.js player instance
 const player = new Tone.Player({
-	url: 'https://tonejs.github.io/audio/berklee/gong_1.mp3',
-	loop: true
+  url: '/tunes/DIA_BAJO_130_strings_historia_Fmin.wav',
+  loop: true
 }).toDestination();
 
 // create a new Tone.js reverb effect instance
@@ -59,24 +59,25 @@ const reverb = new Tone.Reverb().toDestination();
 // set up the start button
 const startBtn = document.getElementById('startBtn');
 startBtn.addEventListener('click', () => {
-	player.start();
+  player.start();
 });
 
 // set up the stop button
 const stopBtn = document.getElementById('stopBtn');
 stopBtn.addEventListener('click', () => {
-	player.stop();
+  player.stop();
 });
 
 // set up the reverb slider
 const reverbSlider = document.getElementById('reverbSlider');
 reverbSlider.addEventListener('input', () => {
-	const value = parseFloat(reverbSlider.value);
-	reverb.wet.value = value;
+  const value = parseFloat(reverbSlider.value);
+  reverb.wet.value = 1 - value; // subtract value from 1 to invert direction
 });
 
 // connect the player to the reverb effect
 player.connect(reverb);
+
 
 
     const textt = document.getElementById("textt");

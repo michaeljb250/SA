@@ -34,11 +34,17 @@ application.register("eq", EqController)
 import FreeverbController from "./freeverb_controller"
 application.register("freeverb", FreeverbController)
 
+import FreeverberController from "./freeverber_controller"
+application.register("freeverber", FreeverberController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import HomeController from "./home_controller"
 application.register("home", HomeController)
+
+import JazzController from "./jazz_controller"
+application.register("jazz", JazzController)
 
 import JcverbController from "./jcverb_controller"
 application.register("jcverb", JcverbController)
@@ -58,14 +64,23 @@ application.register("panner", PannerController)
 import PassController from "./pass_controller"
 application.register("pass", PassController)
 
+import PasserController from "./passer_controller"
+application.register("passer", PasserController)
+
 import PhaserController from "./phaser_controller"
 application.register("phaser", PhaserController)
 
 import PingController from "./ping_controller"
 application.register("ping", PingController)
 
+import PopController from "./pop_controller"
+application.register("pop", PopController)
+
 import ReverbController from "./reverb_controller"
 application.register("reverb", ReverbController)
+
+import RockController from "./rock_controller"
+application.register("rock", RockController)
 
 import SynthController from "./synth_controller"
 application.register("synth", SynthController)

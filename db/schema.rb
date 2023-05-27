@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_02_042353) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_26_015015) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,6 +59,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_02_042353) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "jazzs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "jcverbs", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -79,6 +84,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_02_042353) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "passers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "passes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -94,7 +104,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_02_042353) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pops", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "reverbs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rocks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

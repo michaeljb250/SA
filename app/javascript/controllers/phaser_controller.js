@@ -4,7 +4,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="phaser"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Audio phaser is an effect that creates notches and peaks in the frequency spectrum of an audio signal.",  "It is achieved by splitting the signal into two or more paths, ",  "Audio phaser is commonly used in music production to add movement and texture to sounds, particularly guitars and synthesizers."];
 
     let index = 0;
     let textIndex = 0;

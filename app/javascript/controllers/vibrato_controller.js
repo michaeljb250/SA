@@ -5,7 +5,7 @@ import * as Tone from 'tone'
 export default class extends Controller {
   connect() {
 
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Vibrato creates a subtle variation in pitch, oscillating above and below the original pitch.",  "It is commonly used in music to add expressiveness and warmth to a sustained note or melody."];
 
     let index = 0;
     let textIndex = 0;
@@ -49,7 +49,7 @@ export default class extends Controller {
 
 
 // Load audio file
-const audioFile = "https://tonejs.github.io/audio/berklee/gong_1.mp3";
+const audioFile = "/tunes/SO_CM_130_vocal_pase_choir_Gmin.wav";
 const player = new Tone.Player(audioFile).toDestination();
 
 // Define buttons
@@ -79,11 +79,11 @@ let isVibratoOn = false;
 vibratoBtn.addEventListener("click", () => {
   if (isVibratoOn) {
     vibrato.depth.value = 0; // Turn off vibrato by setting depth to 0
-    vibratoBtn.textContent = "Vibrato On";
+    vibratoBtn.textContent = "Turn Vibrato On";
     isVibratoOn = false;
   } else {
     vibrato.depth.value = 0.5; // Turn on vibrato by setting depth to 0.5
-    vibratoBtn.textContent = "Vibrato Off";
+    vibratoBtn.textContent = "Turn Vibrato Off";
     isVibratoOn = true;
   }
 });

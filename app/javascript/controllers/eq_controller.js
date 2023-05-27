@@ -5,7 +5,7 @@ import * as Tone from 'tone'
 export default class extends Controller {
   connect() {
 
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Audio EQ, or equalization, is the process of adjusting the balance between different frequency components of an audio signal.",  "It is used to enhance or reduce specific frequencies, such as boosting bass or cutting out unwanted noise."];
 
     let index = 0;
     let textIndex = 0;
@@ -47,7 +47,7 @@ export default class extends Controller {
 
     type();
 
-    const audioFile = 'https://tonejs.github.io/audio/berklee/gong_1.mp3';
+    const audioFile = '/tunes/SNS_SD_110_guitar_bubble_boy_Bmaj(1).wav';
 const player = new Tone.Player(audioFile).toDestination();
 const eq3 = new Tone.EQ3().toDestination();
 const lowGainSlider = document.getElementById('low-gain-slider');

@@ -1,8 +1,6 @@
 <html>
 <style>
 body {
-  background-color: pink;
-  color: #fff;
   font-family: sans-serif;
 }
 
@@ -13,10 +11,11 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
+# h1 {
+#   font-size: 2em;
+#   margin-bottom: 20px;
+#   text-color: black;
+# }
 
 .player {
   display: flex;
@@ -26,7 +25,7 @@ h1 {
 }
 
 button {
-  background-color: #1abc9c;
+  background-color: pink;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -64,27 +63,27 @@ label {
   </head>
   <body>
   <div data-controller="ping">
-  <div class="conter">
+   <div class="conter">
       <h1 id="text"></h1>
       <div class="button-container">
         <button id="back-btn">Back</button>
         <button id="next-btn">Next</button>
-      </div>
-      <div id="textt-box">
+        </div>
+       <div id="textt-box">
         <p id="textt"></p>
       </div>
-  <div class="button-pos">
-    <div class="container">
+      <div class="button-pos">
+      <div class="container">
       <div class="player">
         <button id="playButton">Play</button>
         <button id="stopButton" disabled>Stop</button>
         <div class="toggle">
           <input type="checkbox" id="pingPongCheckbox">
-          <label for="pingPongCheckbox">Enable Ping Pong Delay</label>
+          <label class="ponk" for="pingPongCheckbox">Enable Ping Pong Delay</label>
         </div>
       </div>
     </div>
-  </div>
+   </div>
     <script src="app.js"></script>
   </div>
   </body>

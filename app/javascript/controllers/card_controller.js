@@ -4,7 +4,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="card"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Gain refers to the increase or decrease of the signal level of an audio signal, typically measured in decibels (dB).",  "It is commonly used in the context of sound engineering, where the gain control is used to adjust the level of an audio signal before it is processed or amplified.",  "In guitar playing, gain is often associated with distortion. It is used to increase the amplitude of an electric guitar's signal to create a distorted, overdriven sound."];
 
 let index = 0;
 let textIndex = 0;
@@ -46,7 +46,7 @@ document.getElementById("back-btn").addEventListener("click", () => {
 
 type();
 
-var player = new Tone.Player("https://tonejs.github.io/audio/berklee/gong_1.mp3");
+var player = new Tone.Player("/tunes/OS_ES_90_electric_guitar_melody_love_Am.wav");
 
 var distortion = new Tone.Distortion();
 

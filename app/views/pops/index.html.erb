@@ -1,0 +1,162 @@
+<html>
+<style>
+#visualizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#marker {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  z-index: 1;
+  cursor: grab;
+   background-color: green; /* set marker color */
+}
+
+#marker:active {
+  cursor: grabbing;
+}
+
+#start-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  background-color: pink;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#start-button:hover {
+  background-color: #3e8e41;
+}
+
+#stop-button {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  z-index: 2;
+  background-color: pink;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#stop-button:hover {
+  background-color: #c9302c;
+}
+
+#text {
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 22px;
+}
+
+.conter {
+  padding-top: 400px;
+}
+
+.button-container button {
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #3e8e41;
+}
+
+.button-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#visualizer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#marker-2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker-2:active {
+  cursor: grabbing;
+}
+
+#visualizer-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#marker-3 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker-4:active {
+  cursor: grabbing;
+}
+</style>
+<head>
+  <link rel="stylesheet">
+</head>
+<body>
+  <div data-controller="pop">
+  <div id="visualizer"></div>
+  <div id="marker"></div>
+  <div id="visualizer-2"></div>
+  <div id="marker-2"></div>
+  <div id="visualizer-3"></div>
+  <div id="marker-3"></div>
+  <div id="visualizer-4"></div>
+  <div id="marker-4"></div>
+  <button id="start-button">Start</button>
+  <button id="stop-button">Stop</button>
+  </div>
+  </div>
+</body>
+</html>

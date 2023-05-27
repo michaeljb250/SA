@@ -4,7 +4,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="tremelo"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Tremolo is an effect that modulates the volume of a sound wave. It creates a rhythmic pulsation and a fluctuation in volume. ",  "It is commonly used in music to add depth, texture, and dynamic movement to a sound."];
 
     let index = 0;
     let textIndex = 0;
@@ -53,7 +53,7 @@ export default class extends Controller {
 
     // create a player for the audio file
     const player = new Tone.Player({
-      url: "https://tonejs.github.io/audio/berklee/gong_1.mp3",
+      url: "/tunes/OS_MLW_85_electric_guitar_chords_sunset_Cm.wav",
       loop: true,
     }).connect(tremolo);
 
