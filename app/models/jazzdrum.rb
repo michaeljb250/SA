@@ -1,0 +1,2 @@
+class Jazzdrum < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class JazzdrumsController < ApplicationController
+end

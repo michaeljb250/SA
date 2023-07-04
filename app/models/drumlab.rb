@@ -1,0 +1,2 @@
+class Drumlab < ApplicationRecord
+end

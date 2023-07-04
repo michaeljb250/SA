@@ -1,0 +1,2 @@
+class SynthlabsController < ApplicationController
+end

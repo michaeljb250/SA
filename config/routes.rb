@@ -28,6 +28,15 @@ Rails.application.routes.draw do
                             resources :jazzs
                              resources :rocks
                               resources :pops
+                               resources :drumlabs
+                                resources :spatialaudios
+                                resources :hip_hops
+                                 resources :jazzdrums
+                                  resources :synthlabs
+                                   resources :livemixs
+                                    resources :rockdrums
+                                     resources :popdrums
+                                      resources :hiphopdrums
     end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

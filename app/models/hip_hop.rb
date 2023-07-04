@@ -1,0 +1,2 @@
+class HipHop < ApplicationRecord
+end

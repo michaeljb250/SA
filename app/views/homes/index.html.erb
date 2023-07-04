@@ -116,10 +116,8 @@ button:active {
 .righto {
  display: flex;
  justify-content: space-between;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   background: white;
-  text-decoration: underline;
-  text-decoration-color: white;
 }
 
 
@@ -132,13 +130,53 @@ button:active {
   font-family: 'Courier New', Courier, monospace;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+canvas {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+}
+.playButton {
+  text-decoration: none;
+}
+
+.redder {
+  display: flex;
+   padding-bottom: 1px;
+   font-size: 40px;
+   padding-top: 6px;
+}
+
+
 </style>
 
 <body>
 <div data-controller="home">
  <div class="righto">
-  <button>Drum Lab</button>
-  <button>Synth Lab</button>
+  <button><%= link_to "Drum Labs", drumlabs_path %></button>
+  <button><%= link_to "Spatial Audio", spatialaudios_path %></button>
+  </div>
+  <div class="righto">
+  <button><%= link_to "Compression", compressors_path %></button>
+  <button><%= link_to "Synth Labs", synthlabs_path %></button>
+  </div>
+  <div class="righto">
+  <button><%= link_to "Live Mix", livemixs_path %></button>
+  </div>
+  <div data-controller="waver">
+  <div class="redder">
+  <div id="playButton">&#9658;</div>
+  <div id="pauseButton"> &#9724;</div>
+  </div>
+  <canvas id="waveformCanvas"></canvas>
   </div>
 <div class="first">
   FUNDAMENTALS
@@ -218,15 +256,6 @@ button:active {
 <div class="second">
 <div class="third">
 <%= link_to "Limiter", limiters_path, class: "second" %>
-</div>
-<div class="third">
-<%= link_to "Compressor", compressors_path, class: "second" %>
-</div>
-<div class="third">
-<%= link_to "Multiband", multibands_path, class: "second" %>
-</div>
-<div class="third">
-<%= link_to "Pass", passers_path, class: "second" %>
 </div>
 </div>
 <div class="first">

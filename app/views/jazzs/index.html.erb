@@ -4,31 +4,125 @@
   <link rel="stylesheet">
 </head>
 <style>
-#visualizer {
+#visualizer4 {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", monospace;
 }
 
-#marker {
- position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: green;
-  border-radius: 50%;
-  z-index: 1;
-  cursor: grab;
+.slideshow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#marker:active {
-  cursor: grabbing;
+.slide {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 30s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.slide:nth-child(1) {
+  animation-name: fade-1;
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-name: fade-2;
+  animation-delay: 30s;
+}
+
+.slide:nth-child(3) {
+  animation-name: fade-3;
+  animation-delay: 50s;
+}
+
+@keyframes fade-1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+#stop-button:hover {
+  background-color: #c9302c;
+}
+
+#text {
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 22px;
+}
+
+.conter {
+  padding-top: 400px;
 }
 
 #start-button {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 20px;
   z-index: 2;
   background-color: pink;
@@ -58,25 +152,6 @@
   cursor: pointer;
   font-size: 16px;
   font-family: 'Courier New', Courier, monospace;
-}
-
-#stop-button:hover {
-  background-color: #c9302c;
-}
-
-#text {
-  font-size: 24px;
-  font-family: 'Courier New', Courier, monospace;
-  white-space: pre-wrap;
-}
-
-.button-container {
-  display: flex;
-  margin-top: 22px;
-}
-
-.conter {
-  padding-top: 400px;
 }
 
 .button-container button {
@@ -109,6 +184,14 @@
   bottom: 0;
 }
 
+#visualizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 #marker-2 {
   position: absolute;
   width: 20px;
@@ -124,6 +207,24 @@
 }
 
 #visualizer-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#visualizer {
   position: absolute;
   top: 0;
   left: 0;
@@ -170,7 +271,7 @@
 <body>
 <div data-controller="jazz">
  <div>
-  <div id="visualizer"></div>
+  <div id="visualizer"> </div>
   <div id="marker"></div>
   <div id="visualizer-2"></div>
   <div id="marker-2"></div>
@@ -180,12 +281,15 @@
   <button id="stop-button">Stop</button>
   </div>
 </div>
-  <div class="conter">
-  <h1 id="text"></h1>
-  <div class="button-container">
-    <button id="back-btn">Back</button>
-    <button id="next-btn">Next</button>
+  <div id="visualizer4">
+  <div class="slideshow">
+  <span class="slide">Heyyy</span>
+  <span class="slide">ggjnui</span>
+  <span class="slide">ytunku</span>
   </div>
+</div>
+</div>
+
 </div>
 </body>
 </html>

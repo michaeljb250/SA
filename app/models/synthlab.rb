@@ -1,0 +1,2 @@
+class Synthlab < ApplicationRecord
+end

@@ -28,6 +28,9 @@ application.register("delay", DelayController)
 import DistortionController from "./distortion_controller"
 application.register("distortion", DistortionController)
 
+import DrumlabController from "./drumlab_controller"
+application.register("drumlab", DrumlabController)
+
 import EqController from "./eq_controller"
 application.register("eq", EqController)
 
@@ -40,17 +43,29 @@ application.register("freeverber", FreeverberController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import HipHopController from "./hip_hop_controller"
+application.register("hip-hop", HipHopController)
+
+import HiphopdrumController from "./hiphopdrum_controller"
+application.register("hiphopdrum", HiphopdrumController)
+
 import HomeController from "./home_controller"
 application.register("home", HomeController)
 
 import JazzController from "./jazz_controller"
 application.register("jazz", JazzController)
 
+import JazzdrumController from "./jazzdrum_controller"
+application.register("jazzdrum", JazzdrumController)
+
 import JcverbController from "./jcverb_controller"
 application.register("jcverb", JcverbController)
 
 import LimiterController from "./limiter_controller"
 application.register("limiter", LimiterController)
+
+import LivemixController from "./livemix_controller"
+application.register("livemix", LivemixController)
 
 import MultibandController from "./multiband_controller"
 application.register("multiband", MultibandController)
@@ -76,14 +91,26 @@ application.register("ping", PingController)
 import PopController from "./pop_controller"
 application.register("pop", PopController)
 
+import PopdrumController from "./popdrum_controller"
+application.register("popdrum", PopdrumController)
+
 import ReverbController from "./reverb_controller"
 application.register("reverb", ReverbController)
 
 import RockController from "./rock_controller"
 application.register("rock", RockController)
 
+import RockdrumController from "./rockdrum_controller"
+application.register("rockdrum", RockdrumController)
+
+import SpatialaudioController from "./spatialaudio_controller"
+application.register("spatialaudio", SpatialaudioController)
+
 import SynthController from "./synth_controller"
 application.register("synth", SynthController)
+
+import SynthlabController from "./synthlab_controller"
+application.register("synthlab", SynthlabController)
 
 import TremeloController from "./tremelo_controller"
 application.register("tremelo", TremeloController)
@@ -96,3 +123,6 @@ application.register("vibrato", VibratoController)
 
 import VolsController from "./vols_controller"
 application.register("vols", VolsController)
+
+import WaverController from "./waver_controller"
+application.register("waver", WaverController)

@@ -1,0 +1,2 @@
+class Drumone < ApplicationRecord
+end
