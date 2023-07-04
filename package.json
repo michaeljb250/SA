@@ -6,6 +6,7 @@
     "@hotwired/turbo-rails": "^7.3.0",
     "@popperjs/core": "^2.11.7",
     "bootstrap": "^5.2.3",
+    "gsap": "^3.11.5",
     "howler": "^2.2.3",
     "tone": "^14.7.77",
     "typed.js": "^2.0.15",

@@ -1,0 +1,2 @@
+class LivemixsController < ApplicationController
+end

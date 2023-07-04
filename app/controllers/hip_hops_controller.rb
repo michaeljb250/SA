@@ -1,0 +1,2 @@
+class HipHopsController < ApplicationController
+end

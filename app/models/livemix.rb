@@ -1,0 +1,2 @@
+class Livemix < ApplicationRecord
+end

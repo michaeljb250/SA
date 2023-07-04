@@ -1,0 +1,2 @@
+class Popdrum < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Hiphopdrum < ApplicationRecord
+end

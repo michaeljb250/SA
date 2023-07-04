@@ -1,0 +1,116 @@
+<style>
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.synth-controls {
+  margin: 10px;
+}
+
+.play-btn {
+  font-size: 24px;
+  padding: 15px 30px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+  transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: #555;
+}
+
+.play-btn:active {
+  background-color: #333;
+}
+
+
+#animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.raindrop {
+  position: absolute;
+  width: 1px;
+  height: 20px;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 20px;
+  font-family: "Courier New", monospace;
+}
+
+.button-container button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #3e8e41;
+}
+
+.button-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#text {
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
+</style>
+<head>
+  <meta charset="UTF-8">
+  <title>Tone.js Synth Buttons</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div data-controller="synthlab">
+  <h1 id="text"></h1>
+  <div class="button-container">
+    <button id="back-btn">Back</button>
+    <button id="next-btn">Next</button>
+  </div>
+  <div class="container">
+    <div class="synth-controls">
+      <button class="play-btn" id="play1">Membrane Synth</button>
+    </div>
+    <div class="synth-controls">
+      <button class="play-btn" id="play2">Metal Synth</button>
+    </div>
+    <div class="synth-controls">
+      <button class="play-btn" id="play3">FM Synth</button>
+    </div>
+    <div class="synth-controls">
+      <button class="play-btn" id="play4">AM Synth</button>
+    </div>
+  </div>
+</div>
+  <canvas id="animation"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://unpkg.com/tone"></script>
+  <script src="app.js"></script>
+</body>
+</html>

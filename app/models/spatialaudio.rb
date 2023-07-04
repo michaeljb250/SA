@@ -1,0 +1,2 @@
+class Spatialaudio < ApplicationRecord
+end

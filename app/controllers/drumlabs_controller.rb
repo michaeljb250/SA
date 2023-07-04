@@ -1,0 +1,2 @@
+class DrumlabsController < ApplicationController
+end

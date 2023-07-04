@@ -1,0 +1,2 @@
+class SpatialaudiosController < ApplicationController
+end

@@ -1,87 +1,95 @@
-<head>
-<title>Typing Animation</title>
-<link rel="stylesheet">
-</head>
-<body>
-<style>
 
-/* Style for the buttons */
-button {
-  background-color: pink;
-  border: none;
-  color: white;
-  padding: 10px 20px;
+<html>
+<style>
+body {
+  font-family: "Courier New", monospace;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h1 {
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px;
+  color: #333333;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555555;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 20px;
+  -webkit-appearance: none;
+  background-color: #dddddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #333333;
+  border-radius: 50%;
   cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
   border-radius: 5px;
+  font-family: "Courier New", monospace;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #3e8e41;
-}
-/* Style for the container holding sliders and buttons */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  height: 70vh;
+  background-color: #555555;
 }
 
-.slider {
-  width: 100%;
-  height: 2px;
-  margin: 10px 0;
-  background-color: #ddd;
-  -webkit-appearance: none;
-  appearance: none;
+button:active {
+  background-color: #222222;
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  background-color: pink;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
-  background-color: pink;
-  cursor: pointer;
-}
 </style>
-<script src="https://unpkg.com/@hotwired/stimulus@3.0.0/dist/stimulus.umd.js"></script>
+<head>
+  <title>Audio Player with Multiband Compressor</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
+</head>
+<body>
 <div data-controller="compressor">
-   <h1>Tone.js Audio Player</h1>
-   <div class="conter">
-    <h1 id="text"></h1>
-    <div class="button-container">
-      <button id="back-btn">Back</button>
-      <button id="next-btn">Next</button>
-    </div>
-    <div id="textt-box">
-      <p id="textt"></p>
-    </div>
- <div class="container">
-    <div>
-    <button id="start-btn">Start</button>
-    <button id="stop-btn">Stop</button>
+ <h1 id="text"></h1>
+  <div class="button-container">
+    <button id="back-btn">Back</button>
+    <button id="next-btn">Next</button>
   </div>
   <div>
-    <label for="attack-slider">Attack:</label>
-    <input class="slider" type="range" min="0" max="1" step="0.01" value="0.1" id="attack-slider">
+    <label for="lowSlider">Low Band Threshold:</label>
+    <input type="range" id="lowSlider" min="-60" max="0" step="0.1" value="-24">
   </div>
+
   <div>
-    <label for="release-slider">Release:</label>
-    <input class="slider" type="range" min="0" max="1" step="0.01" value="0.5" id="release-slider">
+    <label for="midSlider">Mid Band Threshold:</label>
+    <input type="range" id="midSlider" min="-60" max="0" step="0.1" value="-18">
   </div>
-</div>
+
+  <div>
+    <label for="highSlider">High Band Threshold:</label>
+    <input type="range" id="highSlider" min="-60" max="0" step="0.1" value="-12">
+  </div>
+
+  <div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </div>
 </div>
 </body>
+</html>

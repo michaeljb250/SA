@@ -1,0 +1,278 @@
+<style>
+#text {
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.button-container button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #3e8e41;
+}
+
+.button-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.check {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#drum-machine {
+  margin-top: 50px;
+}
+
+.drum-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drum-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.drum-name {
+  width: 80px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.drum-step {
+  width: 20px;
+  height: 20px;
+  background-color: #ddd;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.drum-step.active {
+  background-color: gold;
+}
+
+#controls {
+  margin-top: 20px;
+}
+
+#play-pause-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.tempo {
+  margin-top: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#tempo-slider {
+  width: 200px;
+}
+
+#tempo-display {
+  font-weight: bold;
+}
+
+#tempo-slider {
+  width: 200px;
+  height: 8px;
+  -webkit-appearance: none;
+  background-color: #ddd;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+#tempo-slider:hover {
+  opacity: 1;
+}
+
+#tempo-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#tempo-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.audio-player {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: pink;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.controls button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #2980b9;
+}
+
+.track-select-container {
+  margin-top: 10px;
+}
+
+.track-select-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.track-select {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+</style>
+<body>
+<div data-controller="jazzdrum">
+  <div class="audio-player">
+    <div class="controls">
+      <button id="start-btn">Start</button>
+      <button id="stop-btn">Stop</button>
+    </div>
+    <select id="track-select">
+      <option value="track1">Track 1</option>
+      <option value="track2">Track 2</option>
+      <option value="track3">Track 3</option>
+    </select>
+  </div>
+  <h1 id="text"></h1>
+  <div class="button-container">
+    <button id="back-btn">Back</button>
+    <button id="next-btn">Next</button>
+  </div>
+  <div class="check">
+  <div id="drum-machine">
+    <div class="drum-grid">
+      <div class="drum-row">
+        <div class="drum-name">Kick</div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+      </div>
+      <div class="drum-row">
+        <div class="drum-name">Snare</div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+        <div class="drum-step"></div>
+      </div>
+      <div class="drum-row">
+      <div class="drum-name">Snare</div>
+      <div class="drum-step"></div>
+      <div class="drum-step"></div>
+      <div class="drum-step"></div>
+      <div class="drum-step"></div>
+      <div class="drum-step"></div>
+      <div class="drum-step"></div>
+      <div class="drum-step"></div>
+      <div class="drum-step"></div>
+    </div>
+    <div class="drum-row">
+    <div class="drum-name">Snare</div>
+    <div class="drum-step"></div>
+    <div class="drum-step"></div>
+    <div class="drum-step"></div>
+    <div class="drum-step"></div>
+    <div class="drum-step"></div>
+    <div class="drum-step"></div>
+    <div class="drum-step"></div>
+    <div class="drum-step"></div>
+  </div>
+  <div class="drum-row">
+  <div class="drum-name">Snare</div>
+  <div class="drum-step"></div>
+  <div class="drum-step"></div>
+  <div class="drum-step"></div>
+  <div class="drum-step"></div>
+  <div class="drum-step"></div>
+  <div class="drum-step"></div>
+  <div class="drum-step"></div>
+  <div class="drum-step"></div>
+</div>
+      <!-- Add more drum rows here if needed -->
+    </div>
+    </div>
+    <div id="controls">
+      <button id="play-pause-button">Play</button>
+      <div class="tempo">
+        <label for="tempo-slider">Tempo:</label>
+        <input type="range" id="tempo-slider" min="60" max="240" step="10" value="120">
+        <span id="tempo-display">120</span>
+      </div>
+    </div>
+  </div>
+ </div>
+</body>
