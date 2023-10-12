@@ -82,10 +82,7 @@ function init() {
   });
 }
 
-// Call the init function when the DOM has loaded
-document.addEventListener("DOMContentLoaded", init);
-
-const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+const textArray = [  "Membrane synths can be used to simulate traditional percussion instruments like drums, as well as create abstract, otherworldly tones.",  "Metal synths provide a means to generate powerful and aggressive sounds, enabling musicians to create compelling metal compositions as wellas other genres.",  "FM/AM synths have been used in various musical genres, ranging from pop and electronic music to experimental and ambient genres. They offer a distinctive and versatile sound palette that can be both expressive and complex,"];
 
 let index = 0;
 let textIndex = 0;
@@ -126,6 +123,8 @@ document.getElementById("back-btn").addEventListener("click", () => {
 });
 
 type();
+
+init();
 
   }
 }

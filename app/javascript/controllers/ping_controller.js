@@ -4,7 +4,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="ping"
 export default class extends Controller {
   connect() {
-    const textArray = [  "Ping pong delay involves alternating the delay between the left and right channels to create a bouncingping pong effect.",  "Ping pong delay is commonly used in music production to create a sense of space and movement in the stereo field."];
+    const textArray = [  "Ping pong delay involves alternating the delay between the left and right channels to create a bouncing ping pong effect.",  "Ping pong delay is commonly used in music production to create a sense of space and movement in the stereo field."];
 
     let index = 0;
     let textIndex = 0;
@@ -84,9 +84,8 @@ document.querySelector("#pingPongCheckbox").addEventListener("change", togglePin
 const textt = document.getElementById("textt");
 let indexx = 0;
 const textArrayy = [
-  { textt: "This is the first line of text", duration: 10000 },
-  { textt: "This is the second line of text", duration: 10000 },
-  { textt: "This is the third line of text", duration: 10000 }
+  { textt: "The ping pong delay effect is like having your music bounce around the room. It adds a three-dimensional quality that can really enhance the listening experience.", duration: 10000 },
+  { textt: "Using ping pong delay on vocals gives them a unique character and makes them stand out in the mix. It's a simple yet powerful tool for adding texture and movement to recordings", duration: 10000 }
 ];
 
 function rotateText() {

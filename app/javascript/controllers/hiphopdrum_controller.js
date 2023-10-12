@@ -128,7 +128,7 @@ export default class extends Controller {
     updateTempoDisplay();
     });
 
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "The kick and snare drum relationship forms the foundation of hip hop drumming. Focus on creating a punchy and well-defined kick drum that provides a solid low-end presence, and a snappy snare drum that cuts through the mix. ",  " Hip hop often incorporates unique and unconventional percussion elements. Explore adding percussion samples, such as shakers, tambourines, or handclaps, to add rhythmic interest and enhance the groove.",  "Hip hop spans a wide range of tempos and BPMs. Experiment with different tempos to match the mood and style of your composition. Faster tempos are associated with more energetic and uptempo styles, while slower tempos can evoke a laid-back and relaxed vibe."];
 
     let index = 0;
     let textIndex = 0;

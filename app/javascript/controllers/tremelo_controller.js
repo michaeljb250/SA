@@ -90,9 +90,9 @@ export default class extends Controller {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "'Tremolo is a timeless effect that adds movement and rhythmic interest to your guitar sound. It can take a simple chord progression and make it come alive with pulsating energy.' - Johnny Marr", duration: 10000 },
+      { textt: "'Tremolo is the secret ingredient for creating a sense of motion in your music. It can make a static sound come alive, adding a sense of ebb and flow that keeps the listener engaged.' - Jonny Greenwood", duration: 10000 },
+      { textt: "'Tremolo is like a sonic wave that carries your guitar sound. It's a powerful effect that can create a sense of drama and intensity, adding another dimension to your music.' - Tom Morello", duration: 10000 }
     ];
 
     function rotateText() {

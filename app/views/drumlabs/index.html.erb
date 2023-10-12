@@ -116,7 +116,7 @@ button:active {
 .righto {
  display: flex;
  justify-content: space-between;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   background: white;
   text-decoration: none;
 }
@@ -142,10 +142,17 @@ a:hover {
 
 <body>
 <div data-controller="home">
- <div class="righto">
-  <button><%= link_to "Fundamentals", homes_path %></button>
-  <button><%= link_to "Spatial Audio", panners_path %></button>
-  </div>
+<div class="righto">
+<button><%= link_to "Home", homes_path %></button>
+<button><%= link_to "Spatial Audio", spatialaudios_path %></button>
+</div>
+<div class="righto">
+<button><%= link_to "Compression", compressors_path %></button>
+<button><%= link_to "Synth Labs", synthlabs_path %></button>
+</div>
+<div class="righto">
+<button><%= link_to "Live Mix", livemixs_path %></button>
+</div>
 <div class="first">
   Drum Labs
 <div class="second">
@@ -153,13 +160,13 @@ a:hover {
   <%= link_to "Jazz", jazzdrums_path, class: "second" %>
   </div>
   <div class="third">
-  <%= link_to "Rock", rocks_path, class: "second" %>
+  <%= link_to "Rock", rockdrums_path, class: "second" %>
   </div>
   <div class="third">
-  <%= link_to "Pop", pops_path, class: "second" %>
+  <%= link_to "Pop", popdrums_path, class: "second" %>
   </div>
   <div class="third">
-  <%= link_to "Hip-Hop", hip_hops_path, class: "second" %>
+  <%= link_to "Hip-Hop", hiphopdrums_path, class: "second" %>
   </div>
 </div>
 </div>

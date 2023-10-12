@@ -1,0 +1,2 @@
+class Livepop < ApplicationRecord
+end

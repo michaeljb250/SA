@@ -78,9 +78,9 @@ export default class extends Controller {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "'The audio delay effect is like a sonic echo that adds depth and dimension to a sound. It can create a sense of space and ambience, giving the music a more immersive quality.' - Jimmy Page", duration: 10000 },
+      { textt: "'Delay is a versatile effect that can be used subtly to add a touch of warmth and depth, or it can be pushed to the extremes to create mind-bending sonic landscapes.' - David Gilmour (Pink Floyd)", duration: 10000 },
+      { textt: "'The beauty of the audio delay effect is that it can turn a simple guitar riff or vocal line into something truly captivating. It adds a sense of depth and intrigue that draws the listener in.' - John Mayer", duration: 10000 }
     ];
 
     function rotateText() {
@@ -97,5 +97,11 @@ export default class extends Controller {
     }
 
     rotateText();
+
+    window.addEventListener('beforeunload', function () {
+      // Stop the Tone.js audio player here
+      Tone.Transport.stop();
+      Tone.Transport.cancel();
+  });
   }
 }

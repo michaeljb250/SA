@@ -125,7 +125,7 @@ export default class extends Controller {
     updateTempoDisplay();
     });
 
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Jazz drumming is all about the swing feel. Practice playing swung eighth notes and work on getting a consistent and relaxed swing groove.",  "Listen to and study recordings of jazz drumming legends like Art Blakey, Elvin Jones, Philly Joe Jones, and Tony Williams. ",  "Be open to experimentation and improvisation: Jazz is an improvisational art form, so embrace the spirit of experimentation. Take risks, explore new ideas, and be open to incorporating different genres and influences into your playing."];
 
     let index = 0;
     let textIndex = 0;

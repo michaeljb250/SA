@@ -90,9 +90,8 @@ autoWahButton.addEventListener('click', () => {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "With autowah, your guitar speaks with an attitude, delivering expressive and percussive wah-infused tones that make your music stand out", duration: 10000 },
+      { textt: "Autowah is a funky companion that brings out the rhythmic soul of your playing, allowing you to effortlessly navigate between wah-infused grooves and melodic lines.", duration: 10000 }
     ];
 
     function rotateText() {
@@ -109,5 +108,12 @@ autoWahButton.addEventListener('click', () => {
     }
 
     rotateText();
+
+
+    window.addEventListener('unload', function () {
+      // Stop the Tone.js audio player here
+      Tone.Transport.stop();
+      Tone.Transport.cancel();
+  });
   }
 }

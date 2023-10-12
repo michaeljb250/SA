@@ -31,6 +31,9 @@ application.register("distortion", DistortionController)
 import DrumlabController from "./drumlab_controller"
 application.register("drumlab", DrumlabController)
 
+import EightypopController from "./eightypop_controller"
+application.register("eightypop", EightypopController)
+
 import EqController from "./eq_controller"
 application.register("eq", EqController)
 
@@ -52,6 +55,9 @@ application.register("hiphopdrum", HiphopdrumController)
 import HomeController from "./home_controller"
 application.register("home", HomeController)
 
+import IndiepopController from "./indiepop_controller"
+application.register("indiepop", IndiepopController)
+
 import JazzController from "./jazz_controller"
 application.register("jazz", JazzController)
 
@@ -64,8 +70,20 @@ application.register("jcverb", JcverbController)
 import LimiterController from "./limiter_controller"
 application.register("limiter", LimiterController)
 
+import LivehiphopController from "./livehiphop_controller"
+application.register("livehiphop", LivehiphopController)
+
+import LivejazzController from "./livejazz_controller"
+application.register("livejazz", LivejazzController)
+
 import LivemixController from "./livemix_controller"
 application.register("livemix", LivemixController)
+
+import LivepopController from "./livepop_controller"
+application.register("livepop", LivepopController)
+
+import LiverockController from "./liverock_controller"
+application.register("liverock", LiverockController)
 
 import MultibandController from "./multiband_controller"
 application.register("multiband", MultibandController)

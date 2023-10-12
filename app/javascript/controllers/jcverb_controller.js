@@ -87,9 +87,9 @@ reverbButton.addEventListener("click", () => {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "", duration: 10000 },
+      { textt: "", duration: 10000 },
+      { textt: "", duration: 10000 }
     ];
 
     function rotateText() {

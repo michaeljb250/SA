@@ -94,9 +94,8 @@ export default class extends Controller {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "Chorus enriches your vocals, adding a subtle modulation that enhances the natural beauty and expressiveness of your voice", duration: 10000 },
+      { textt: "Chorus is a time-tested effect that brings warmth and character to your sound, infusing it with a touch of vintage charm", duration: 10000 }
     ];
 
     function rotateText() {

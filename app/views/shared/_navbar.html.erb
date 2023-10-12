@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your App</title>
+  <style>
+    /* Navbar Styles */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+      transition: transform 0.3s; /* Add transition for smooth animation */
+    }
+
+    nav ul li:hover {
+      transform: scale(1.1); /* Apply scale transformation on hover */
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s; /* Add transition for color change */
+    }
+
+    nav ul li:hover a {
+      color: #ffd700; /* Change color on hover */
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><%= link_to "Home", homes_path %></li>
+    <li><%= link_to "About", homes_path %></li>
+    <li><%= link_to "Serv", homes_path %></li>
+    <li><%= link_to "Contact", homes_path %></li>
+  </ul>
+</nav>
+
+</body>
+</html>

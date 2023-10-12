@@ -116,7 +116,7 @@ button:active {
 .righto {
  display: flex;
  justify-content: space-between;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   background: white;
 }
 
@@ -143,10 +143,17 @@ a:hover {
 
 <body>
 <div data-controller="home">
- <div class="righto">
-  <button><%= link_to "Fundamentals", homes_path %></button>
-  <button><%= link_to "Drum Labs", drumlabs_path %></button>
-  </div>
+<div class="righto">
+<button><%= link_to "Drum Labs", drumlabs_path %></button>
+<button><%= link_to "Home", homes_path %></button>
+</div>
+<div class="righto">
+<button><%= link_to "Compression", compressors_path %></button>
+<button><%= link_to "Synth Labs", synthlabs_path %></button>
+</div>
+<div class="righto">
+<button><%= link_to "Live Mix", livemixs_path %></button>
+</div>
 <div class="first">
   Spatial Audio
 <div class="second">

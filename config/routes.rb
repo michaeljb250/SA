@@ -37,6 +37,14 @@ Rails.application.routes.draw do
                                     resources :rockdrums
                                      resources :popdrums
                                       resources :hiphopdrums
+                                       resources :indiepops
+                                        resources :eightiespops
+                                         resources :livepops
+                                          resources :livejazzs
+                                           resources :liverocks
+                                            resources :livehiphops
+
+
     end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,0 +1,2 @@
+class Liverock < ApplicationRecord
+end

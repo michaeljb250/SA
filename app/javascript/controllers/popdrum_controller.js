@@ -126,7 +126,7 @@ export default class extends Controller {
     updateTempoDisplay();
     });
 
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Pop music often thrives on simplicity and catchiness. Keep your drum patterns straightforward... or don't ",  "Pop drumming can benefit from the addition of percussion elements. Consider incorporating shakers, tambourines, claps, or other percussive instruments to add texture and rhythmic interest to the drum arrangement.",  "Well-placed drum fills can bring excitement and energy to a pop composition. Use fills to transition between sections, build anticipation before choruses or breakdowns, and add moments of impact and flair to the song."];
 
     let index = 0;
     let textIndex = 0;

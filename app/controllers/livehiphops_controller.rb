@@ -1,0 +1,2 @@
+class LivehiphopsController < ApplicationController
+end

@@ -76,9 +76,9 @@ distortionSlider.addEventListener("input", function() {
 const textt = document.getElementById("textt");
 let indexx = 0;
 const textArrayy = [
-  { textt: "This is the first line of text", duration: 10000 },
-  { textt: "This is the second line of text", duration: 10000 },
-  { textt: "This is the third line of text", duration: 10000 }
+  { textt: "“Distortion is a beautiful thing. It's a way of life.” - Slash (Guns N' Roses) ", duration: 10000 },
+  { textt: "“I like a heavy guitar, but I like to hear the words too.” - Kurt Cobain (Nirvana) ", duration: 10000 },
+  { textt: "“Playing with high gain and feedback is like making love to your amp.” - Zakk Wylde (Black Label Society) ", duration: 10000 }
 ];
 
 function rotateText() {
@@ -95,6 +95,8 @@ function rotateText() {
 }
 
 rotateText();
+
+
 
   }
 }
