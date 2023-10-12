@@ -1,11 +1,11 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 import * as Tone from 'tone'
-import {Howl, Howler} from 'howler';
+import { Howl, Howler } from 'howler';
 
 // Connects to data-controller="rock"
 export default class extends Controller {
   connect() {
-    // Get references to DOM elements
+   // Get references to DOM elements
 const startButton = document.querySelector('#start-button');
 const stopButton = document.querySelector('#stop-button');
 const marker = document.querySelector('#marker');
@@ -68,6 +68,9 @@ startButton.addEventListener('click', () => {
 stopButton.addEventListener('click', () => {
   sound.stop();
 });
+
+
+
 
 const marker2 = document.querySelector('#marker-2');
 const visualizer2 = document.querySelector('#visualizer-2');
@@ -175,7 +178,6 @@ window.addEventListener('mouseup', (e) => {
   isDraggingMarker3 = false;
 });
 
-
 // Load audio file with Howler.js
 const sound3 = new Howl({
   src: ['/tunes/rockt3.wav'],
@@ -252,51 +254,5 @@ startButton.addEventListener('click', () => {
 stopButton.addEventListener('click', () => {
   sound4.stop();
 });
-
-const marker5 = document.querySelector('#marker-5');
-const visualizer5 = document.querySelector('#visualizer-5');
-
-// Initialize marker position to center of visualizer
-let marker5X = visualizer5.clientWidth / 2;
-let marker5Y = visualizer5.clientHeight / 2;
-marker5.style.transform = `translate(${marker5X}px, ${marker5Y}px)`;
-
-// Set up listener for marker movement
-let isDraggingMarker5 = false;
-let marker5OffsetX = 0;
-let marker5OffsetY = 0;
-marker5.addEventListener('mousedown', (e) => {
-  isDraggingMarker5 = true;
-  marker5OffsetX = e.clientX - marker5X;
-  marker5OffsetY = e.clientY - marker5Y;
-  marker5.style.cursor = 'grabbing';
-});
-window.addEventListener('mousemove', (e) => {
-  if (isDraggingMarker5) {
-    marker5X = e.clientX - visualizer5.offsetLeft - marker5OffsetX;
-    marker5Y = e.clientY - visualizer5.offsetTop - marker5OffsetY;
-    marker5.style.transform = `translate(${marker5X}px, ${marker5Y}px)`;
-
-    // Set spatial position of sound based on marker position
-    const x = (marker5X / visualizer5.clientWidth) * 2 - 1;
-    const y = (marker5Y / visualizer5.clientHeight) * 2 - 1;
-    sound5.pos(x, y, -1); // Set z-coordinate to -1 for 2D sound
-  }
-});
-window.addEventListener('mouseup', (e) => {
-  if (isDraggingMarker5) {
-    marker5X = e.clientX - visualizer5.offsetLeft - marker5OffsetX;
-    marker5Y = e.clientY - visualizer5.offsetTop - marker5OffsetY;
-    marker5.style.transform = `translate(${marker5X}px, ${marker5Y}px)`;
-    marker5.style.cursor = 'grab';
-
-    // Set spatial position of sound based on marker position
-    const x = (marker5X / visualizer5.clientWidth) * 2 - 1;
-    const y = (marker5Y / visualizer5.clientHeight) * 2 - 1;
-    sound5.pos(x, y, -1); // Set z-coordinate to -1 for 2D sound
-  }
-  isDraggingMarker5 = false;
-});
-
   }
 }

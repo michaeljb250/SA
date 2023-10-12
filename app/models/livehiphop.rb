@@ -1,0 +1,2 @@
+class Livehiphop < ApplicationRecord
+end

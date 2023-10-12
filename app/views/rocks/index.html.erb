@@ -1,5 +1,12 @@
+
 <html>
 <style>
+
+img {
+  padding: 0px;
+  width: 45px;
+}
+
 #visualizer {
   position: absolute;
   top: 0;
@@ -15,7 +22,6 @@
   background-size: cover;
   z-index: 1;
   cursor: grab;
-   background-color: green; /* set marker color */
 }
 
 #marker:active {
@@ -69,10 +75,6 @@
 .button-container {
   display: flex;
   margin-top: 22px;
-}
-
-.conter {
-  padding-top: 400px;
 }
 
 .button-container button {
@@ -142,16 +144,49 @@
 }
 
 
-#visualizer4 {
+#visualizer-4 {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Courier New", monospace;
+}
+
+#marker-4 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker-4:active {
+  cursor: grabbing;
+}
+
+
+#visualizer-5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#marker-5 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker-5:active {
+  cursor: grabbing;
 }
 
 .slideshow {
@@ -249,29 +284,28 @@
   white-space: pre-wrap;
 }
 </style>
-<head>
-  <link rel="stylesheet">
-</head>
 <body>
-  <div data-controller="rock">
-  <div id="visualizer"></div>
-  <div id="marker"></div>
-  <div id="visualizer-2"></div>
-  <div id="marker-2"></div>
-  <div id="visualizer-3"></div>
-  <div id="marker-3"></div>
-  <div id="visualizer-4"></div>
-  <div id="marker-4"></div>
-  <button id="start-button">Start</button>
-  <button id="stop-button">Stop</button>
-  </div>
-  <div id="visualizer4">
-  <div class="slideshow">
-  <span class="slide">Heyyy</span>
-  <span class="slide">ggjnui</span>
-  <span class="slide">ytunku</span>
-  </div>
-  </div>
-  </div>
+<div data-controller="rocks">
+<div id="visualizer"></div>
+<div id="marker">
+</div>
+<div id="visualizer-2"></div>
+<div id="marker-2">
+</div>
+<div id="visualizer-3"></div>
+<div id="marker-3">
+</div>
+   <div id="visualizer-4"></div>
+<div id="marker-4">
+</div>
+<button id="start-button">Start</button>
+<button id="stop-button">Stop</button>
+</div>
+ <div class="slideshow">
+<span class="slide">The drums, including the kick, snare, toms, and cymbals, are typically centered in the mix. </span>
+<span class="slide">Electric guitars in rock music are often panned left and right to create a wide stereo spread. </span>
+<span class="slide">The bass guitar is usually centered in the mix, anchoring the low-end and providing a solid foundation. Consider the arrangement and the interaction between the bass and guitar to ensure clarity and separation.</span>
+</div>
+</div>
 </body>
 </html>

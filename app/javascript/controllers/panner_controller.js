@@ -91,9 +91,9 @@ player.connect(panner);
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "'Panning is like painting a sonic picture. It allows you to create a three-dimensional space in the mix and bring out different elements in a way that captivates the listener.' - Alan Parsons", duration: 10000 },
+      { textt: "'Panning is an art form in itself. It's about finding the right balance and placement of instruments and sounds to create a sense of depth and movement in the mix.' - Nigel Godrich (Radiohead producer)", duration: 10000 },
+      { textt: "'Panning is like sculpting with sound. You can shape the mix, carve out space, and guide the listener's attention to different elements by placing them strategically in the stereo field.' - Daniel Lanois", duration: 10000 }
     ];
 
     function rotateText() {

@@ -6,9 +6,9 @@ export default class extends Controller {
     const textt = document.getElementById("textt");
 let indexx = 0;
 const textArrayy = [
-  { textt: "This is the first line of text", duration: 10000 },
-  { textt: "This is the second line of text", duration: 10000 },
-  { textt: "This is the third line of text", duration: 10000 }
+  { textt: "“The music is not in the notes, but in the silence between” - Wolfgang Amadeus Mozart", duration: 10000 },
+  { textt: "“Technology is neutral, but it all depends on the way we use it.” - Jean-Michel Jarre", duration: 10000 },
+  { textt: " “Don’t be a prisoner of your own style!” - Armin van Buuren", duration: 10000 }
 ];
 
 function rotateText() {

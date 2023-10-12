@@ -1,0 +1,2 @@
+class Indiepop < ApplicationRecord
+end

@@ -73,9 +73,8 @@ export default class extends Controller {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "A limiter acts like a safety net for your audio, preventing it from exceeding a certain level and avoiding unwanted distortion. It's a crucial component in achieving a balanced and controlled sound.", duration: 10000 },
+      { textt: "A limiter is a must-have in the mastering process. It helps to ensure that your music translates well across different playback systems by maintaining a consistent volume level while preserving the dynamic range.", duration: 10000 }
     ];
 
     function rotateText() {

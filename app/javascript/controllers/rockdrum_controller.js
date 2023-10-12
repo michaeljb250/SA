@@ -125,7 +125,7 @@ export default class extends Controller {
     updateTempoDisplay();
     });
 
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "The kick and snare drum patterns form the core of rock drumming.",  "Cymbals play a crucial role in rock drumming, providing accents, crashes, and washes of sound. Experiment with different cymbal patterns, including rides, crashes, and hi-hat patterns, to add texture and variation to your compositions.",  "Explore incorporating offbeat accents, ghost notes, and displaced snare hits to create syncopated patterns that enhance the groove and make the drums stand out."];
 
     let index = 0;
     let textIndex = 0;

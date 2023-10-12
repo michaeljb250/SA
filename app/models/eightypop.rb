@@ -1,0 +1,2 @@
+class Eightypop < ApplicationRecord
+end

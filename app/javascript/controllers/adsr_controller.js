@@ -101,9 +101,9 @@ export default class extends Controller {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "'The ADSR envelope is a fundamental tool in electronic music production. It's what gives sounds their shape and character, allowing you to create everything from punchy, percussive hits to long, evolving pads.' - Deadmau5", duration: 10000 },
+      { textt: "'ADSR is all about controlling the evolution of a sound. It's like sculpting with sound waves, shaping the attack, decay, sustain, and release to create sonic textures that captivate the listener.' - Richard Devine", duration: 10000 },
+      { textt: "'ADSR is not just a technical concept; it's an artistic tool. It's about understanding how the different parameters interact and using them creatively to craft sounds that evoke emotions and tell stories.' - Hainbach", duration: 10000 }
     ];
 
     function rotateText() {

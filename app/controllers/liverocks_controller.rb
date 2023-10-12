@@ -1,0 +1,2 @@
+class LiverocksController < ApplicationController
+end

@@ -83,9 +83,9 @@ document.getElementById('stop-btn').addEventListener('click', () => {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "'Equalization is the art of finding the sweet spot for each instrument. It's about bringing out the character and personality of a sound by highlighting the frequencies that make it shine.' - Chris Lord-Alge", duration: 10000 },
+      { textt: "'Equalization is a powerful tool, but it should be used with precision and intention. Don't just EQ for the sake of EQing; make sure every adjustment serves a purpose and enhances the overall sonic experience.' - Mick Guzauski", duration: 10000 },
+      { textt: "'EQ is not just a technical process; it's an art form. It's about understanding the emotion and intention behind the music and using EQ to amplify and enhance those elements.' - Manny Marroquin", duration: 10000 }
     ];
 
     function rotateText() {

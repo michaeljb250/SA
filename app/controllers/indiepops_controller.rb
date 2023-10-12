@@ -1,0 +1,2 @@
+class IndiepopsController < ApplicationController
+end

@@ -83,9 +83,9 @@ player.connect(reverb);
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "'Reverb is the sonic equivalent of a beautiful cathedral. It adds richness and depth to the music, making it sound larger than life.' - Brian Eno", duration: 10000 },
+      { textt: "'Reverb is the final touch that completes a mix. It creates a sense of space and brings all the elements together in a cohesive sonic environment.' - Michael Brauer", duration: 10000 },
+      { textt: "'Reverb is like the air around the music; it's what makes it breathe and come alive.' - Tony Maserati", duration: 10000 }
     ];
 
     function rotateText() {

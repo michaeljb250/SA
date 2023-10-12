@@ -1,0 +1,195 @@
+<html>
+<head>
+  <title>Tone.js Audio Tracks</title>
+</head>
+<style>
+body {
+  font-family: "Monospace", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.track {
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls label {
+  margin-right: 10px;
+}
+
+.controls input[type="range"] {
+  width: 200px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  background-color: black;
+  outline: none;
+}
+
+.controls input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls button {
+  margin: 0 10px;
+}
+
+.panner-indicator {
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border-radius: 50%;
+  animation: indicatorAnimation 1s infinite alternate;
+}
+
+@keyframes indicatorAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* Speaker animation */
+@keyframes speakerAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.panner-indicator::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #c0c0c0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: speakerAnimation 1s infinite;
+}
+
+.controls button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  font-family: "Monospace", monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #333;
+}
+
+.controls button:active {
+  background-color: #666;
+}
+
+</style>
+<body>
+  <h1>Tone.js Audio Tracks</h1>
+ <div data-controller="livejazz">
+  <div class="track">
+    <h2>Track 1</h2>
+    <div class="panner">
+      <div class="panner-indicator"></div>
+    </div>
+    <div class="controls">
+      <label for="volumeSlider1">Volume:</label>
+      <input type="range" min="0" max="1" step="0.01" value="0.5" id="volumeSlider1">
+      <label for="lowGainSlider1">Low:</label>
+      <input type="range" min="-12" max="12" step="0.5" value="0" id="lowGainSlider1">
+      <label for="midGainSlider1">Mid:</label>
+      <input type="range" min="-12" max="12" step="0.5" value="0" id="midGainSlider1">
+      <label for="highGainSlider1">High:</label>
+      <input type="range" min="-12" max="12" step="0.5" value="0" id="highGainSlider1">
+      <label for="panningSlider1">Panning:</label>
+      <input type="range" min="-1" max="1" step="0.1" value="0" id="panningSlider1">
+      <label for="compressorSlider1">Compression:</label>
+      <input type="range" min="-40" max="0" step="1" value="-20" id="compressorSlider1">
+    </div>
+
+   <div class="track">
+    <h2>Track 2</h2>
+    <div class="panner">
+      <div class="panner-indicator"></div>
+    </div>
+    <div class="controls">
+      <label for="volumeSlider2">Volume:</label>
+      <input type="range" min="0" max="1" step="0.01" value="0.5" id="volumeSlider2">
+      <label for="lowGainSlider2">Low:</label>
+      <input type="range" min="-12" max="12" step="0.5" value="0" id="lowGainSlider2">
+      <label for="midGainSlider2">Mid:</label>
+      <input type="range" min="-12" max="12" step="0.5" value="0" id="midGainSlider2">
+      <label for="highGainSlider2">High:</label>
+      <input type="range" min="-12" max="12" step="0.5" value="0" id="highGainSlider2">
+      <label for="panningSlider2">Panning:</label>
+      <input type="range" min="-1" max="1" step="0.1" value="0" id="panningSlider2">
+      <label for="compressorSlider2">Compression:</label>
+      <input type="range" min="-40" max="0" step="1" value="-20" id="compressorSlider2">
+    </div>
+
+   <div class="track">
+    <h2>Track 3</h2>
+    <div class="panner">
+      <div class="panner-indicator"></div>
+    </div>
+    <div class="controls">
+      <label for="volumeSlider3">Volume:</label>
+      <input type="range" min="0" max="1" step="0.01" value="0.5" id="volumeSlider3">
+      <label for="lowGainSlider3">Low:</label>
+      <input type="range" min="-12" max="12" step="0.5" value="0" id="lowGainSlider3">
+      <label for="midGainSlider3">Mid:</label>
+      <input type="range" min="-12" max="12" step="0.5" value="0" id="midGainSlider3">
+      <label for="highGainSlider3">High:</label>
+      <input type="range" min="-12" max="12" step="0.5" value="0" id="highGainSlider3">
+      <label for="panningSlider3">Panning:</label>
+      <input type="range" min="-1" max="1" step="0.1" value="0" id="panningSlider3">
+      <label for="compressorSlider3">Compression:</label>
+      <input type="range" min="-40" max="0" step="1" value="-20" id="compressorSlider3">
+    </div>
+   <div class="controls">
+    <button id="playBtn">Play</button>
+    <button id="stopBtn">Stop</button>
+   </div>
+  </div>
+</body>
+</html>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_07_012838) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_14_163750) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +54,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_012838) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "eightypops", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "eqs", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -79,6 +84,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_012838) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "indiepops", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "jazzdrums", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -99,7 +109,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_012838) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "livehiphops", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "livejazzs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "livemixes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "livepops", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "liverocks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

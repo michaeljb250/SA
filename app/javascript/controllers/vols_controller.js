@@ -78,9 +78,8 @@ volumeSlider.addEventListener('input', () => {
 const textt = document.getElementById("textt");
 let indexx = 0;
 const textArrayy = [
-  { textt: "This is the first line of text", duration: 10000 },
-  { textt: "This is the second line of text", duration: 10000 },
-  { textt: "This is the third line of text", duration: 10000 }
+  { textt: "'If it's too loud, you're too old.' - Lemmy Kilmister (Motörhead)", duration: 10000 },
+  { textt: "'If it's too loud, you're too far away.' - Phil Collins", duration: 10000 }
 ];
 
 function rotateText() {
