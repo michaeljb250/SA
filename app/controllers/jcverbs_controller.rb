@@ -1,4 +1,4 @@
 class JcverbsController < ApplicationController
-  def Index
-  end
+    def Index
+    end
 end

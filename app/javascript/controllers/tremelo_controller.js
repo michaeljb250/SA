@@ -90,9 +90,9 @@ export default class extends Controller {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "'Tremolo is a timeless effect that adds movement and rhythmic interest to your guitar sound. It can take a simple chord progression and make it come alive with pulsating energy.' - Johnny Marr", duration: 10000 },
-      { textt: "'Tremolo is the secret ingredient for creating a sense of motion in your music. It can make a static sound come alive, adding a sense of ebb and flow that keeps the listener engaged.' - Jonny Greenwood", duration: 10000 },
-      { textt: "'Tremolo is like a sonic wave that carries your guitar sound. It's a powerful effect that can create a sense of drama and intensity, adding another dimension to your music.' - Tom Morello", duration: 10000 }
+      { textt: "Employ tremolo on short, staccato notes to accentuate their articulation.", duration: 10000 },
+      { textt: "Use tremolo to add to the texture of a section. Apply it to background chords or arpeggios to create movement.", duration: 10000 },
+      { textt: "Set a slow tremolo rate with a moderate depth on sustained instruments, such as strings or synthesizers, to generate an ambient, dreamy atmosphere.", duration: 10000 }
     ];
 
     function rotateText() {

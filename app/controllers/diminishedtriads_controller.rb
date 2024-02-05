@@ -1,0 +1,2 @@
+class DiminishedtriadsController < ApplicationController
+end

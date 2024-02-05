@@ -1,0 +1,2 @@
+class MinorscalesController < ApplicationController
+end

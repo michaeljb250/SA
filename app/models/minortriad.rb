@@ -1,0 +1,2 @@
+class Minortriad < ApplicationRecord
+end

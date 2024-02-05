@@ -1,0 +1,2 @@
+class MinorpentatonicsController < ApplicationController
+end

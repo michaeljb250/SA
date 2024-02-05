@@ -1,11 +1,12 @@
-import { Controller } from "@hotwired/stimulus";
+import { Controller } from "@hotwired/stimulus"
 import * as Tone from 'tone'
-import { Howl, Howler } from 'howler';
+import {Howl, Howler} from 'howler';
 
-// Connects to data-controller="rock"
+// Connects to data-controller="jazz"
 export default class extends Controller {
   connect() {
-   // Get references to DOM elements
+
+    // Get references to DOM elements
 const startButton = document.querySelector('#start-button');
 const stopButton = document.querySelector('#stop-button');
 const marker = document.querySelector('#marker');
@@ -68,9 +69,6 @@ startButton.addEventListener('click', () => {
 stopButton.addEventListener('click', () => {
   sound.stop();
 });
-
-
-
 
 const marker2 = document.querySelector('#marker-2');
 const visualizer2 = document.querySelector('#visualizer-2');
@@ -212,6 +210,7 @@ marker4.addEventListener('mousedown', (e) => {
   marker4OffsetY = e.clientY - marker4Y;
   marker4.style.cursor = 'grabbing';
 });
+
 window.addEventListener('mousemove', (e) => {
   if (isDraggingMarker4) {
     marker4X = e.clientX - visualizer4.offsetLeft - marker4OffsetX;
@@ -224,6 +223,7 @@ window.addEventListener('mousemove', (e) => {
     sound4.pos(x, y, -1); // Set z-coordinate to -1 for 2D sound
   }
 });
+
 window.addEventListener('mouseup', (e) => {
   if (isDraggingMarker4) {
     marker4X = e.clientX - visualizer4.offsetLeft - marker4OffsetX;
@@ -254,5 +254,6 @@ startButton.addEventListener('click', () => {
 stopButton.addEventListener('click', () => {
   sound4.stop();
 });
+
   }
 }

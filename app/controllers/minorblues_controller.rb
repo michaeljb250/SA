@@ -1,0 +1,2 @@
+class MinorbluesController < ApplicationController
+end

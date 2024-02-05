@@ -1,0 +1,2 @@
+class MajorstepsController < ApplicationController
+end

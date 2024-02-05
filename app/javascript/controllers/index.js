@@ -7,6 +7,9 @@ import { application } from "./application"
 import AdsrController from "./adsr_controller"
 application.register("adsr", AdsrController)
 
+import AugmentedtriadController from "./augmentedtriad_controller"
+application.register("augmentedtriad", AugmentedtriadController)
+
 import AutowahController from "./autowah_controller"
 application.register("autowah", AutowahController)
 
@@ -24,6 +27,9 @@ application.register("compressor", CompressorController)
 
 import DelayController from "./delay_controller"
 application.register("delay", DelayController)
+
+import DiminishedtriadController from "./diminishedtriad_controller"
+application.register("diminishedtriad", DiminishedtriadController)
 
 import DistortionController from "./distortion_controller"
 application.register("distortion", DistortionController)
@@ -79,11 +85,47 @@ application.register("livejazz", LivejazzController)
 import LivemixController from "./livemix_controller"
 application.register("livemix", LivemixController)
 
-import LivepopController from "./livepop_controller"
-application.register("livepop", LivepopController)
+import LivepopsController from "./livepops_controller"
+application.register("livepops", LivepopsController)
 
 import LiverockController from "./liverock_controller"
 application.register("liverock", LiverockController)
+
+import MajorbluesController from "./majorblues_controller"
+application.register("majorblues", MajorbluesController)
+
+import MajorpentatonicController from "./majorpentatonic_controller"
+application.register("majorpentatonic", MajorpentatonicController)
+
+import MajorscalegameController from "./majorscalegame_controller"
+application.register("majorscalegame", MajorscalegameController)
+
+import MajorscalesController from "./majorscales_controller"
+application.register("majorscales", MajorscalesController)
+
+import MajorstepController from "./majorstep_controller"
+application.register("majorstep", MajorstepController)
+
+import MajortriadController from "./majortriad_controller"
+application.register("majortriad", MajortriadController)
+
+import MinorbluesController from "./minorblues_controller"
+application.register("minorblues", MinorbluesController)
+
+import MinorpentatonicController from "./minorpentatonic_controller"
+application.register("minorpentatonic", MinorpentatonicController)
+
+import MinorscaleController from "./minorscale_controller"
+application.register("minorscale", MinorscaleController)
+
+import MinorscalegameController from "./minorscalegame_controller"
+application.register("minorscalegame", MinorscalegameController)
+
+import MinorstepController from "./minorstep_controller"
+application.register("minorstep", MinorstepController)
+
+import MinortriadsController from "./minortriads_controller"
+application.register("minortriads", MinortriadsController)
 
 import MultibandController from "./multiband_controller"
 application.register("multiband", MultibandController)
@@ -129,6 +171,12 @@ application.register("synth", SynthController)
 
 import SynthlabController from "./synthlab_controller"
 application.register("synthlab", SynthlabController)
+
+import TemposController from "./tempos_controller"
+application.register("tempos", TemposController)
+
+import TheorieController from "./theorie_controller"
+application.register("theorie", TheorieController)
 
 import TremeloController from "./tremelo_controller"
 application.register("tremelo", TremeloController)

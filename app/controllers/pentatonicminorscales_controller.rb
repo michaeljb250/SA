@@ -1,0 +1,2 @@
+class PentatonicminorscalesController < ApplicationController
+end

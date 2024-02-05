@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grid-item {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #61dafb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item.active {
+  background-color: #bada55 !important;
+}
+
+/* Different colors for notes */
+.note-C { background-color: #FFD700; }
+.note-D { background-color: #FFA500; }
+.note-E { background-color: #FF6347; }
+.note-F { background-color: #8A2BE2; }
+.note-G { background-color: #00CED1; }
+.note-A { background-color: #3CB371; }
+.note-B { background-color: #9370DB; }
+.note-C2 { background-color: #FFD700; } /* higher octave C */
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #282c34;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #282c34;
+  color: #61dafb;
+}
+
+label {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+input {
+  margin-top: 10px;
+  width: 300px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  background: #61dafb;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 5px;
+}
+
+input:hover {
+  opacity: 1;
+}
+
+span {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+/* Add this to your existing CSS styles */
+
+#scale-selector {
+font-size: 16px;
+padding: 10px;
+border: 2px solid #61dafb;
+border-radius: 5px;
+background-color: #282c34;
+color: #61dafb;
+outline: none;
+}
+
+#scale-selector:hover {
+border-color: #282c34;
+background-color: #61dafb;
+color: #282c34;
+}
+
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: 28px;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+</style>
+  <title>Grid Music</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h2>Major Scale</h2>
+<p>The major scale is a fundamental musical scale that consists of seven notes and follows a specific pattern of whole and half steps. It is the foundation for much of Western music and is widely used in various genres. The pattern of intervals for a major scale is:
+</p>
+<p>Whole - Whole - Half - Whole - Whole - Whole - Half
+</p>
+<p>Lets illustrate this with the C major scale:
+</p>
+<p>C - D - E - F - G - A - B - C
+</p>
+<p>Starting from C, you move up by a whole step to D, another whole step to E, a half step to F, a whole step to G, a whole step to A, a whole step to B, and finally a half step back to C.
+</p>
+<p>The major scale is known for its bright and happy sound. It serves as the basis for understanding and building harmony in Western music theory. Each note in the major scale is assigned a degree, and these degrees are crucial for understanding chords, chord progressions, and melodies.
+</p>
+<p>The major scale is a foundational concept in music theory, and its patterns and principles are essential for musicians, composers, and anyone interested in understanding the structure of Western music.
+</p>
+ <div data-controller="majorscales">
+<section id="instructions">
+  <select id="scale-selector">
+    <option value="C">C Major Scale</option>
+    <option value="D">D Major Scale</option>
+    <option value="E">E Major Scale</option>
+    <option value="F">F Major Scale</option>
+    <option value="G">G Major Scale</option>
+    <option value="A">A Major Scale</option>
+    <option value="B">B Major Scale</option>
+  </select>
+</section>
+
+
+  <div id="grid-container"></div>
+  <button id="play-btn">Play</button>
+  <button id="stop-btn">Stop</button>
+  <label for="bpm-slider">BPM:</label>
+  <input type="range" id="bpm-slider" min="60" max="200" value="120">
+  <span id="bpm-value">120 BPM</span>
+</div>
+</div>
+</body>
+</html>

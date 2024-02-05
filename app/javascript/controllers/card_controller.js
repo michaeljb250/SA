@@ -76,9 +76,9 @@ distortionSlider.addEventListener("input", function() {
 const textt = document.getElementById("textt");
 let indexx = 0;
 const textArrayy = [
-  { textt: "“Distortion is a beautiful thing. It's a way of life.” - Slash (Guns N' Roses) ", duration: 10000 },
-  { textt: "“I like a heavy guitar, but I like to hear the words too.” - Kurt Cobain (Nirvana) ", duration: 10000 },
-  { textt: "“Playing with high gain and feedback is like making love to your amp.” - Zakk Wylde (Black Label Society) ", duration: 10000 }
+  { textt: "It can certainly be tricky to understand the difference between Gain and Volume, don't worry if you are initially confused", duration: 10000 },
+  { textt: "The true definition of gain from the analog audio days is the input level. of the audio signal. In essence, the gain control is what you alter prior to entering other forms of processing", duration: 10000 },
+  { textt: "Volume, sometimes referred to as 'amplitude', is a sound system's dB output. Essentially, it is the level of the music coming out of your speakers.", duration: 10000 }
 ];
 
 function rotateText() {

@@ -1,0 +1,2 @@
+class Minorblue < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Minorstep < ApplicationRecord
+end

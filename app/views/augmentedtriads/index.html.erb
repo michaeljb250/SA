@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augmented Harmony Player</title>
+</head>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #282c34;
+    color: #61dafb;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#harmonySelect {
+    margin-bottom: 20px;
+}
+
+#noteButtons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #61dafb;
+    color: #282c34;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: #282c34;
+    color: #61dafb;
+}
+
+button:hover {
+    background-color: #4fa3d1;
+}
+
+#playButton,
+#stopButton {
+    background-color: #61dafb;
+    color: #282c34;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#stopButton {
+    background-color: #e74c3c;
+}
+
+#playButton:hover,
+#stopButton:hover {
+    background-color: #4fa3d1;
+}
+
+/* Add this to your styles.css file */
+button.active {
+    background-color: #282c34;
+    color: red;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+</style>
+
+<body>
+<div data-controller="augmentedtriad">
+    <h1>Augmented Harmony Player</h1>
+<p>
+An augmented triad is a three-note chord that consists of a root note, a major third interval above the root, and an augmented fifth interval above the root. In simpler terms, if you start with a note (lets say C), you would add the note four semitones above it (E) and then add the note eight semitones above the original note (G♯). Put them together, and you have a C augmented triad (C-E-G♯).
+</p>
+<p>
+The distinctive feature of an augmented triad is the augmented fifth, which means the fifth is raised by one semitone compared to a perfect fifth. This creates a unique and somewhat "tense" sound. Augmented triads are less common than major and minor triads but are used in various musical contexts for their specific tonal color.
+
+In summary, an augmented triad consists of a root note, a major third, and an augmented fifth, giving it a bright and somewhat dissonant quality.
+</p>
+    <!-- Dropdown for selecting harmonies -->
+    <label for="harmonySelect">Select Harmony:</label>
+    <select id="harmonySelect">
+        <option value="0">C Augmented</option>
+        <option value="1">F Augmented</option>
+        <option value="2">G Augmented</option>
+        <option value="3">A Augmented</option>
+        <option value="4">D Augmented</option>
+        <option value="5">E Augmented</option>
+        <option value="6">B Augmented</option>
+        <option value="7">Db Augmented</option>
+        <option value="8">Eb Augmented</option>
+        <option value="9">Ab Augmented</option>
+        <option value="10">Bb Augmented</option>
+    </select>
+
+    <!-- Buttons for notes -->
+    <div id="noteButtons">
+        <!-- Note buttons will be dynamically added here -->
+    </div>
+
+    <button id="playButton">Play Harmony</button>
+    <button id="stopButton">Stop</button>
+</body>
+</html>

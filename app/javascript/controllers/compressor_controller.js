@@ -52,7 +52,7 @@ document.getElementById("stop").addEventListener("click", () => {
   player.stop();
 });
 
-const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+const textArray = [  "Compression focuses on managing the dynamic range of an audio signal. It reduces the difference between the loudest and softest parts of the signal, making the audio more balanced and preventing distortion or unwanted volume fluctuations.",  "Compression is commonly used to control dynamics, enhance sustain, and maintain a consistent volume level, especially in the context of music production and audio recording.",  "This is different to EQ, which involves adjusting the balance between different frequency components within an audio signal. EQ is used to modify the timbre or character of the audio by emphasizing or de-emphasizing certain frequency ranges."];
 
 let index = 0;
 let textIndex = 0;

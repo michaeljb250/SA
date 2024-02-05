@@ -13,6 +13,7 @@ html { box-sizing: border-box; height: 100%; font-size: 10px; } *, *::before, *:
 #   font-size: 60px;
 #   color: black;
 #   background-color: white;
+
 # }
 
 # .second {
@@ -63,6 +64,28 @@ html { box-sizing: border-box; height: 100%; font-size: 10px; } *, *::before, *:
 #     box-shadow: none;
 #   }
 # }
+
+@media (max-width: 768px) {
+  /* Add responsive styles here */
+  .third {
+    padding: 1.5rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+.first {
+  overflow: hidden; /* Add overflow property */
+}
+
+.third {
+  overflow: hidden; /* Add overflow property */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+
 
 .smasb
 
@@ -148,11 +171,8 @@ a:hover {
 <button><%= link_to "Home", homes_path %></button>
 </div>
 <div class="righto">
-<button><%= link_to "Compression", compressors_path %></button>
+<button><%= link_to "Theory", theories_path %></button>
 <button><%= link_to "Synth Labs", synthlabs_path %></button>
-</div>
-<div class="righto">
-<button><%= link_to "Live Mix", livemixs_path %></button>
 </div>
 <div class="first">
   Spatial Audio
@@ -168,6 +188,12 @@ a:hover {
   </div>
   <div class="third">
   <%= link_to "Hip-Hop", hip_hops_path, class: "second" %>
+  </div>
+  <div class="third">
+  <%= link_to "80s pop", eightiespops_path, class: "second" %>
+  </div>
+  <div class="third">
+  <%= link_to "Indie pop", indiepops_path, class: "second" %>
   </div>
 </div>
 </div>

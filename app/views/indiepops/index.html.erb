@@ -1,191 +1,22 @@
+
+
 <html>
+<head>
+  <title>Howler.js Spatial Audio Example</title>
+  <link rel="stylesheet">
+</head>
 <style>
-
-img {
-  padding: 0px;
-  width: 45px;
-}
-
-#visualizer {
+#visualizer4 {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-#marker {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  z-index: 1;
-  cursor: grab;
-}
-
-#marker:active {
-  cursor: grabbing;
-}
-
-#start-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 2;
-  background-color: pink;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-#start-button:hover {
-  background-color: #3e8e41;
-}
-
-#stop-button {
-  position: absolute;
-  top: 60px;
-  left: 20px;
-  z-index: 2;
-  background-color: pink;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-#stop-button:hover {
-  background-color: #c9302c;
-}
-
-#text {
-  font-size: 24px;
-  font-family: 'Courier New', Courier, monospace;
-  white-space: pre-wrap;
-}
-
-.button-container {
   display: flex;
-  margin-top: 22px;
-}
-
-.button-container button {
-  background-color: white;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin-right: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button-container button:hover {
-  background-color: #3e8e41;
-}
-
-.button-container button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-#visualizer-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-#marker-2 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  z-index: 1;
-  cursor: grab;
-}
-
-#marker-2:active {
-  cursor: grabbing;
-}
-
-#visualizer-3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-#marker-3 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: blue;
-  border-radius: 50%;
-  z-index: 1;
-  cursor: grab;
-}
-
-#marker-3:active {
-  cursor: grabbing;
-}
-
-
-#visualizer-4 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-#marker-4 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: pink;
-  border-radius: 50%;
-  z-index: 1;
-  cursor: grab;
-}
-
-#marker-4:active {
-  cursor: grabbing;
-}
-
-
-#visualizer-5 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-#marker-5 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: blue;
-  border-radius: 50%;
-  z-index: 1;
-  cursor: grab;
-}
-
-#marker-5:active {
-  cursor: grabbing;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", monospace;
+  z-index: -1;
 }
 
 .slideshow {
@@ -282,32 +113,191 @@ img {
   font-family: 'Courier New', Courier, monospace;
   white-space: pre-wrap;
 }
+
+.button-container {
+  display: flex;
+  margin-top: 22px;
+}
+
+.conter {
+  padding-top: 400px;
+}
+
+#start-button {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 2;
+  background-color: pink;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#start-button:hover {
+  background-color: #3e8e41;
+}
+
+#stop-button {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  z-index: 2;
+  background-color: pink;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.button-container button {
+
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #3e8e41;
+}
+
+.button-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#visualizer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#visualizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#marker-2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker-2:active {
+  cursor: grabbing;
+}
+
+#visualizer-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#visualizer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#marker-3 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker-3:active {
+  cursor: grabbing;
+}
+
+#visualizer-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#marker-4 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: grab;
+}
+
+#marker-5:active {
+  cursor: grabbing;
+}
 </style>
 <body>
 <div data-controller="indiepop">
-<div id="visualizer"></div>
-<div id="marker">
-<img src="image/piano.png" alt="pino"></img>
+ <div>
+  <div id="visualizer"> </div>
+  <div id="marker"></div>
+  <div id="visualizer-2"></div>
+  <div id="marker-2"></div>
+  <div id="visualizer-3"></div>
+  <div id="marker-3"></div>
+  <div id="visualizer-4"></div>
+  <div id="marker-4"></div>
+  <button id="start-button">Start</button>
+  <button id="stop-button">Stop</button>
+  </div>
 </div>
-<div id="visualizer-2"></div>
-<div id="marker-2">
-<img src="image/drums.png" alt="pino"></img>
+  <div id="visualizer4">
+  <div class="slideshow">
+  <span class="slide">The drums, including the kick, snare, toms, and cymbals, are typically centered in the mix. </span>
+  <span class="slide">Electric guitars in rock music are often panned left and right to create a wide stereo spread. </span>
+  <span class="slide">The bass guitar is usually centered in the mix, anchoring the low-end and providing a solid foundation. Consider the arrangement and the interaction between the bass and guitar to ensure clarity and separation.</span>
+  </div>
 </div>
-<div id="visualizer-3"></div>
-<div id="marker-3">
-<img src="image/bass.png" alt="pino"></img>
-</div>
-   <div id="visualizer-4"></div>
-<div id="marker-4">
-<img src="image/guitar.png" alt="pino"></img>
-</div>
-<button id="start-button">Start</button>
-<button id="stop-button">Stop</button>
-</div>
- <div class="slideshow">
-<span class="slide">The drums, including the kick, snare, toms, and cymbals, are typically centered in the mix. </span>
-<span class="slide">Electric guitars in rock music are often panned left and right to create a wide stereo spread. </span>
-<span class="slide">The bass guitar is usually centered in the mix, anchoring the low-end and providing a solid foundation. Consider the arrangement and the interaction between the bass and guitar to ensure clarity and separation.</span>
 </div>
 </div>
 </body>

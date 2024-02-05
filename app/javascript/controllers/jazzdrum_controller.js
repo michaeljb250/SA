@@ -14,16 +14,16 @@ export default class extends Controller {
     };
 
     const drumGrid = [
-      { sound: "hi-hat", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "tom", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "bass", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "crash", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "ride", steps: [false, false, false, false, false, false, false, false] },
+      { sound: "hi-hat", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "tom", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "bass", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "crash", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "ride", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
       // Add more drums here if needed
     ];
 
     const numDrums = drumGrid.length;
-    const numSteps = 8;
+    const numSteps = 16;
     let isPlaying = false;
     let currentStep = 0;
     let tempo = 120;
@@ -125,7 +125,7 @@ export default class extends Controller {
     updateTempoDisplay();
     });
 
-    const textArray = [  "Jazz drumming is all about the swing feel. Practice playing swung eighth notes and work on getting a consistent and relaxed swing groove.",  "Listen to and study recordings of jazz drumming legends like Art Blakey, Elvin Jones, Philly Joe Jones, and Tony Williams. ",  "Be open to experimentation and improvisation: Jazz is an improvisational art form, so embrace the spirit of experimentation. Take risks, explore new ideas, and be open to incorporating different genres and influences into your playing."];
+    const textArray = [  "The hi-hat usually plays on beats 2 and 4 in Jazz, emphasizing the backbeat",  "The bass drum often plays on beats 1 and 3, providing a steady pulse in conjunction with the hi-hat and ride cymbal.",  "The ride cymbal often plays a consistent pattern, producing a shimmering sound. The crash cymbal is used to accentuate certain beats.",  "The tom-toms are used to add fills and other rhythmic variations."];
 
     let index = 0;
     let textIndex = 0;

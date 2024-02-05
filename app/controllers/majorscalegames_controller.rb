@@ -1,0 +1,2 @@
+class MajorscalegamesController < ApplicationController
+end

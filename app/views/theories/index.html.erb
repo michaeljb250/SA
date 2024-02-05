@@ -1,0 +1,268 @@
+<style>
+$bg-size-end: 4.2;
+$dur: 0.7s;
+bg
+
+html { box-sizing: border-box; height: 100%; font-size: 10px; } *, *::before, *::after { box-sizing: inherit; }
+
+# .first {
+#   display: flex;
+#   text-align: center;
+#   flex-direction: column;
+#   font-family: "Lucida Console", "Courier New", monospace;
+#   font-size: 60px;
+#   color: black;
+#   background-color: white;
+# }
+
+# .second {
+#   padding: 50px;
+#    max-width: 50%;
+#    background: white;
+# }
+
+# .third {
+#   outline: none;
+#   user-select: none;
+#   color: $color-dark;
+#   font-family: "Lucida Console", "Courier New", monospace;
+#   font-size: 4rem;
+#   letter-spacing: 0.04rem;
+#   padding: 1.5rem 3rem;
+#   cursor: pointer;
+#   border-radius: .4rem;
+#   border: .3rem solid $color-dark;
+#   background: $color-light;
+#   position: relative;
+#   overflow: hidden;
+#   padding: 10px;
+#   background: white;
+# }
+
+#   &::after {
+#     content: '';
+#     position: absolute;
+#     width: 100%;
+#     height: 100%;
+#     top: 0;
+#     left: 0;
+#     transform: scale(0);
+#     transition: transform $dur ease-in;
+#     mix-blend-mode: difference;
+#     //Gradient start values are somewhat arbitrary. But this seemed a good fit to avoid overly-blurry circle edge.
+#     background: radial-gradient(
+#       circle at center,
+#       $color-light 24%,
+#       $color-dark 25%,
+#       $color-dark 100%);
+#   }
+
+#   box-shadow: 0 5px 0 0 $color-dark;
+#   &:active {
+#     top: 5px;
+#     box-shadow: none;
+#   }
+# }
+
+.smasb
+
+{
+  color: white;
+}
+
+button {
+  width: 300px;
+  --border: 5px;    /* the border width */
+  --slant: 0.7em;   /* control the slanted corners */
+  --color: #37E8FC; /* the color */
+
+  font-size: 35px;
+  padding: 0.4em 1.2em;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color);
+  background:
+     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path:
+      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+              100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+             );
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+button:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+button:hover,
+button:active{
+  background-size: 100% 100%;
+  color: #fff;
+  --t: 0.2s 0.1s;
+}
+button:active {
+  --s: #0005;
+  transition: none;
+}
+
+.righto {
+ display: flex;
+ justify-content: space-between;
+  padding-bottom: 20px;
+  background: white;
+  text-decoration: none;
+}
+
+
+.textt {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  font-family: 'Courier New', Courier, monospace;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Styles for mobile devices */
+  .righto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Add more styles as needed for smaller screens */
+}
+
+@media only screen and (min-width: 601px) {
+  /* Styles for larger screens */
+  .righto {
+    justify-content: space-between;
+  }
+
+  /* Add more styles as needed for larger screens */
+}
+
+@media (max-width: 768px) {
+  /* Add responsive styles here */
+  .third {
+    padding: 1.5rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+.first {
+  overflow: hidden; /* Add overflow property */
+}
+
+.third {
+  overflow: hidden; /* Add overflow property */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  #textt-box {
+    display: none;
+  }
+
+
+</style>
+
+<body>
+<div data-controller="home">
+ <div class="righto">
+  <button><%= link_to "Drum Labs", drumlabs_path %></button>
+  <button><%= link_to "Spatial Audio", spatialaudios_path %></button>
+  </div>
+  <div class="righto">
+  <button><%= link_to "Home", homes_path %></button>
+  <button><%= link_to "Synth Labs", synthlabs_path %></button>
+  </div>
+<div class="first">
+  Scales
+<div class="second">
+  <div class="third">
+  <%= link_to "Major Scales", majorscales_path, class: "second" %>
+  </div>
+  <div class="third">
+  <%= link_to "Minor Scales", minorscales_path, class: "second" %>
+  </div>
+  <div class="third">
+  <%= link_to "Maj.Pentatonic", majorpentatonics_path, class: "second" %>
+  </div>
+  <div class="third">
+  <%= link_to "Min.Pentatonic", minorpentatonics_path, class: "second" %>
+  </div>
+  <div class="third">
+  <%= link_to "Major Blues", bluescales_path, class: "second" %>
+  </div>
+  <div class="third">
+  <%= link_to "Minor Blues", minorblues_path, class: "second" %>
+  </div>
+</div>
+</div>
+<div class="first">
+  Intervals
+<div class="second">
+<div class="third">
+<%= link_to "Major", majorsteps_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Minor", minorsteps_path, class: "second" %>
+</div>
+</div>
+<div class="first">
+  Triads
+<div class="second">
+<div class="third">
+<%= link_to "Major", majortriads_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Minor", minortriads_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Diminished", diminishedtriads_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Augmented", augmentedtriads_path, class: "second" %>
+  </div>
+</div>
+  <div class="first">
+  Rythm
+<div class="second">
+  <div class="third">
+  <%= link_to "Tempo Tapper", tempos_path, class: "second" %>
+  </div>
+  <div id="textt-box">
+  <p id="textt"></p>
+</div>
+</div>
+    <div class="first">
+  Ear Training
+<div class="second">
+<div class="third">
+<%= link_to "Minor scale", majorscalegames_path, class: "second" %>
+</div>
+<div class="third">
+<%= link_to "Major Scale", minorscalegames_path, class: "second" %>
+</div>
+</div>
+</body>

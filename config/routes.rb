@@ -43,6 +43,27 @@ Rails.application.routes.draw do
                                           resources :livejazzs
                                            resources :liverocks
                                             resources :livehiphops
+                                             resources :theories
+                                              resources :majorscales
+                                               resources :minorscales
+                                                resources :majorpentatonics
+                                                 resources :minorpentatonics
+                                                  resources :bluescales
+                                                   resources :scales
+                                                   resources :majortriads
+                                                    resources :minortriads
+                                                    resources :diminishedtriads
+                                                     resources :augmentedtriads
+                                                      resources :majorpentatonics
+                                                       resources :minorpentatonics
+                                                        resources :tempos
+                                                         resources :majorscalegames
+                                                          resources :minorscalegames
+                                                           resources :minorsteps
+                                                            resources :majorsteps
+                                                             resources :bluescales
+                                                              resources :minorblues
+
 
 
     end

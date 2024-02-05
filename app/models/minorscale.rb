@@ -1,0 +1,2 @@
+class Minorscale < ApplicationRecord
+end

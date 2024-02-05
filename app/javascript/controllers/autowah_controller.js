@@ -90,8 +90,8 @@ autoWahButton.addEventListener('click', () => {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "With autowah, your guitar speaks with an attitude, delivering expressive and percussive wah-infused tones that make your music stand out", duration: 10000 },
-      { textt: "Autowah is a funky companion that brings out the rhythmic soul of your playing, allowing you to effortlessly navigate between wah-infused grooves and melodic lines.", duration: 10000 }
+      { textt: "Use auto-wah on rhythmic patterns, such as guitar strumming or funky bass lines, to accentuate specific beats or create a rhythmic 'wah' motion.", duration: 10000 },
+      { textt: "Apply it to pads, synths, or even drum loops to create sweeping motion and filter-like effects.", duration: 10000 }
     ];
 
     function rotateText() {

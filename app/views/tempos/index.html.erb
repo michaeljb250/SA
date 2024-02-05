@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Metronome App</title>
+</head>
+<style>
+
+#centeredcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: #3498db;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+#stopButton {
+    background: #e74c3c;
+}
+
+#stopButton:hover {
+    background: #c0392b;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+input {
+    padding: 8px;
+    font-size: 14px;
+    margin: 5px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#bpm {
+    width: 80%;
+}
+
+#bpmValue {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.highlight {
+    background-color: #2ecc71; /* or any color you prefer */
+    transition: background-color 0.3s ease;
+}
+
+</style>
+<body>
+<div id="centeredcontent">
+<div data-controller="tempos">
+    <div class="container">
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+        <label for="numerator">Numerator:</label>
+        <input type="number" id="numerator" value="3" min="1">
+        <label for="denominator">Denominator:</label>
+        <input type="number" id="denominator" value="4" min="1">
+        <label for="bpm">BPM:</label>
+        <input type="range" id="bpm" min="20" max="200" value="120">
+        <span id="bpmValue">120 BPM</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -5,26 +5,26 @@ import * as Tone from 'tone'
 export default class extends Controller {
   connect() {
     const drumSounds = {
-      "kick": "/tunes/popo1.wav",
-      "snare": "/tunes/popo2.wav",
-      "hihat": "/tunes/popo3.wav",
-      "clap": "/tunes/popo4.wav",
-      "tom": "/tunes/popo5.wav",
+      "open-hat": "/tunes/popo1.wav",
+      "cymbal": "/tunes/popo2.wav",
+      "snare": "/tunes/popo3.wav",
+      "closed-hat": "/tunes/popo4.wav",
+      "kick": "/tunes/popo5.wav",
 
       // Add more drum sounds here if needed
     };
 
     const drumGrid = [
-      { sound: "kick", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "snare", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "hihat", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "clap", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "tom", steps: [false, false, false, false, false, false, false, false] },
+      { sound: "open-hat", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "cymbal", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "snare", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "closed-hat", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "kick", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
       // Add more drums here if needed
     ];
 
     const numDrums = drumGrid.length;
-    const numSteps = 8;
+    const numSteps = 16;
     let isPlaying = false;
     let currentStep = 0;
     let tempo = 120;
@@ -126,7 +126,7 @@ export default class extends Controller {
     updateTempoDisplay();
     });
 
-    const textArray = [  "Pop music often thrives on simplicity and catchiness. Keep your drum patterns straightforward... or don't ",  "Pop drumming can benefit from the addition of percussion elements. Consider incorporating shakers, tambourines, claps, or other percussive instruments to add texture and rhythmic interest to the drum arrangement.",  "Well-placed drum fills can bring excitement and energy to a pop composition. Use fills to transition between sections, build anticipation before choruses or breakdowns, and add moments of impact and flair to the song."];
+    const textArray = [  "Pop music often thrives on simplicity and catchiness. Keep your drum patterns straightforward... or don't ",  "Alternating between closed hi-hats and open hi-hats on beats 1 and 3 can create dynamics and accents in the groove.",  "The snare often occupies beat 2 and 4, while the kick operates on the 1 and 3 on slower ballads, or all notes on faster tunes."];
 
     let index = 0;
     let textIndex = 0;
