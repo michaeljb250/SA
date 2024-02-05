@@ -1,0 +1,2 @@
+class MinortriadsController < ApplicationController
+end

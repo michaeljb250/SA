@@ -16,17 +16,17 @@ export default class extends Controller {
     };
 
     const drumGrid = [
-      { sound: "kick", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "snare", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "hihat", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "clap", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "cymbal", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "808", steps: [false, false, false, false, false, false, false, false] },
+      { sound: "kick", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "snare", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "hihat", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "clap", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "cymbal", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "808", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ] },
       // Add more drums here if needed
     ];
 
     const numDrums = drumGrid.length;
-    const numSteps = 8;
+    const numSteps = 16;
     let isPlaying = false;
     let currentStep = 0;
     let tempo = 120;

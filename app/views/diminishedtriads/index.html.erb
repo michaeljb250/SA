@@ -1,0 +1,119 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diminished Harmony Player</title>
+</head>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #282c34;
+    color: #61dafb;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#harmonySelect {
+    margin-bottom: 20px;
+}
+
+#noteButtons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #61dafb;
+    color: #282c34;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: #282c34;
+    color: #61dafb;
+}
+
+button:hover {
+    background-color: #4fa3d1;
+}
+
+#playButton,
+#stopButton {
+    background-color: #61dafb;
+    color: #282c34;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#stopButton {
+    background-color: #e74c3c;
+}
+
+#playButton:hover,
+#stopButton:hover {
+    background-color: #4fa3d1;
+}
+
+/* Add this to your styles.css file */
+button.active {
+    background-color: #282c34;
+    color: red;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+</style>
+<body>
+<div data-controller="diminishedtriad">
+    <h1>Diminished Harmony Player</h1>
+    <p>
+    A diminished triad is a three-note chord that consists of a root note, a minor third interval above the root, and a diminished fifth interval above the root. In simpler terms, if you start with a note (lets say C), you would add the note three semitones above it (E♭) and then add the note six semitones above the original note (G♭). Put them together, and you have a C diminished triad (C-E♭-G♭).
+    </p>
+    <p>
+    The defining characteristic of a diminished triad is the diminished fifth, which means the fifth is lowered by one semitone compared to a perfect fifth. This creates a tense and dissonant quality in the chord. Diminished triads are often used for their instability and the desire to resolve to more stable chords.
+
+    In summary, a diminished triad consists of a root note, a minor third, and a diminished fifth, giving it a dissonant and unstable sound.
+    </p>
+    <!-- Dropdown for selecting harmonies -->
+    <label for="harmonySelect">Select Harmony:</label>
+    <select id="harmonySelect">
+        <option value="0">C Diminished</option>
+        <option value="1">F Diminished</option>
+        <option value="2">G Diminished</option>
+        <option value="3">A Diminished</option>
+        <option value="4">D Diminished</option>
+        <option value="5">E Diminished</option>
+        <option value="6">B Diminished</option>
+        <option value="7">Db Diminished</option>
+        <option value="8">Eb Diminished</option>
+        <option value="9">Ab Diminished</option>
+        <option value="10">Bb Diminished</option>
+    </select>
+
+    <!-- Buttons for notes -->
+    <div id="noteButtons">
+        <!-- Note buttons will be dynamically added here -->
+    </div>
+
+    <button id="playButton">Play Harmony</button>
+    <button id="stopButton">Stop</button>
+  </div>
+</body>
+</html>

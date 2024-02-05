@@ -1,0 +1,2 @@
+class BluescalesController < ApplicationController
+end

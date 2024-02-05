@@ -1,0 +1,2 @@
+class Minorscalegame < ApplicationRecord
+end

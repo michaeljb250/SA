@@ -1,0 +1,2 @@
+class PentatonicmajorscalesController < ApplicationController
+end

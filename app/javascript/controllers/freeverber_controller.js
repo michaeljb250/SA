@@ -5,7 +5,7 @@ import * as Tone from 'tone'
 // Connects to data-controller="delay"
 export default class extends Controller {
   connect() {
-    const textArray = [  "This is the first line of text.",  "This is the second line of text.",  "This is the third line of text."];
+    const textArray = [  "Delay refers to a time delay between the input and output of an audio signal.",  "It can used as an effect in music production to create echoes or other time-based effects." ];
 
     let index = 0;
     let textIndex = 0;
@@ -78,9 +78,9 @@ export default class extends Controller {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "This is the first line of text", duration: 10000 },
-      { textt: "This is the second line of text", duration: 10000 },
-      { textt: "This is the third line of text", duration: 10000 }
+      { textt: "The audio delay effect is great for giving the music a more immersive quality.", duration: 10000 },
+      { textt: "Delay can be used subtly to add a touch of warmth and depth, or it can be pushed to the extremes to create mind-bending sound", duration: 10000 },
+      { textt: "One trait of the audio delay effect is that it can turn a simple guitar riff or audio track into something truly captivating." , duration: 10000 }
     ];
 
     function rotateText() {

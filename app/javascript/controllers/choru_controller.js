@@ -94,8 +94,8 @@ export default class extends Controller {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "Chorus enriches your vocals, adding a subtle modulation that enhances the natural beauty and expressiveness of your voice", duration: 10000 },
-      { textt: "Chorus is a time-tested effect that brings warmth and character to your sound, infusing it with a touch of vintage charm", duration: 10000 }
+      { textt: "Apply chorus to instruments, especially guitars and keyboards, to achieve a thicker and wider sound.", duration: 10000 },
+      { textt: "Use chorus on electric guitars to enhance clean or lightly distorted tones. It can add a shimmering quality to arpeggios and chords, providing a lush and expansive sound.", duration: 10000 }
     ];
 
     function rotateText() {

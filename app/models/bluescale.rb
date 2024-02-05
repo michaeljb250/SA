@@ -1,0 +1,2 @@
+class Bluescale < ApplicationRecord
+end

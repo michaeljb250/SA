@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Music</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */ /* Try removing or adjusting this line */
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #282c34;
+  color: #61dafb;
+}
+
+#centeredcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.grid-item {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #61dafb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item.active {
+  background-color: #bada55 !important;
+}
+
+/* Different colors for notes */
+.note-C { background-color: #FFD700; }
+.note-D { background-color: #FFA500; }
+.note-E { background-color: #FF6347; }
+.note-F { background-color: #8A2BE2; }
+.note-G { background-color: #00CED1; }
+.note-A { background-color: #3CB371; }
+.note-B { background-color: #9370DB; }
+.note-C2 { background-color: #FFD700; } /* higher octave C */
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #282c34;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #282c34;
+  color: #61dafb;
+}
+
+label {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+input {
+  margin-top: 10px;
+  width: 300px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  background: #61dafb;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 5px;
+}
+
+input:hover {
+  opacity: 1;
+}
+
+span {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+/* Add this to your existing CSS styles */
+
+#scale-selector {
+font-size: 16px;
+padding: 10px;
+border: 2px solid #61dafb;
+border-radius: 5px;
+background-color: #282c34;
+color: #61dafb;
+outline: none;
+}
+
+#scale-selector:hover {
+border-color: #282c34;
+background-color: #61dafb;
+color: #282c34;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+</style>
+<body>
+<h2>Choose a Scale</h2>
+<p>
+The minor pentatonic scale is a five-note scale derived from the natural minor scale. It is widely used in various musical genres, especially in blues, rock, and jazz. The scale has a distinct, bluesy sound and is known for its versatility in creating expressive and emotive melodies.
+</p>
+<p>
+To construct a minor pentatonic scale, you start with the natural minor scale and select specific degrees. The formula for the minor pentatonic scale is 1st, minor 3rd, 4th, 5th, and minor 7th of the natural minor scale.
+</p>
+Lets illustrate this with the A natural minor scale:
+<p>
+A - B - C - D - E - F - G
+</p>
+From this, we take the 1st (A), minor 3rd (C), 4th (D), 5th (E), and minor 7th (G) notes to create the A minor pentatonic scale:
+<p>
+A - C - D - E - G
+</p>
+<p>
+So, the A minor pentatonic scale consists of A, C, D, E, and G.
+</p>
+<p>
+The minor pentatonic scale is known for its "bluesy" and soulful qualities. It's often used in soloing, improvisation, and creating melodies in a minor key. The simplicity and expressive nature of the scale make it a favorite among guitarists, saxophonists, and other instrumentalists.
+</p>
+<div id="centeredcontent">
+<div data-controller="minorpentatonic">
+<section id="instructions">
+
+  <select id="scale-selector">
+    <option value="C">C Minor</option>
+    <option value="D">D Minor </option>
+    <option value="E">E Minor </option>
+    <option value="F">F Minor </option>
+    <option value="G">G Minor </option>
+    <option value="A">A Minor </option>
+    <option value="B">B Minor </option>
+  </select>
+</section>
+
+  <div id="grid-container"></div>
+  <button id="play-btn">Play</button>
+  <button id="stop-btn">Stop</button>
+  <label for="bpm-slider">BPM:</label>
+  <input type="range" id="bpm-slider" min="60" max="200" value="120">
+  <span id="bpm-value">120 BPM</span>
+</div>
+</div>
+</body>
+</html>

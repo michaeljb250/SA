@@ -13,7 +13,7 @@ h1 {
 }
 
 div {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 label {
@@ -51,12 +51,18 @@ button {
   cursor: pointer;
 }
 
+
+
 button:hover {
   background-color: #555555;
 }
 
 button:active {
   background-color: #222222;
+}
+
+.button-container {
+  padding-bottom: 40px;
 }
 
 </style>
@@ -72,20 +78,18 @@ button:active {
     <button id="next-btn">Next</button>
   </div>
   <div>
+  <div>
     <label for="lowSlider">Low Band Threshold:</label>
     <input type="range" id="lowSlider" min="-60" max="0" step="0.1" value="-24">
   </div>
-
   <div>
     <label for="midSlider">Mid Band Threshold:</label>
     <input type="range" id="midSlider" min="-60" max="0" step="0.1" value="-18">
   </div>
-
   <div>
     <label for="highSlider">High Band Threshold:</label>
     <input type="range" id="highSlider" min="-60" max="0" step="0.1" value="-12">
   </div>
-
   <div>
     <button id="start">Start</button>
     <button id="stop">Stop</button>

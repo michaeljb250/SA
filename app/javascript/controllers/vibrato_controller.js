@@ -91,9 +91,9 @@ vibratoBtn.addEventListener("click", () => {
 const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "'Vibrato is the soul of a singer. It adds emotion, depth, and a unique character to the voice, allowing the singer to truly connect with the audience.' - Celine Dion", duration: 10000 },
-      { textt: "'Vibrato is like the human voice of the guitar. It adds a vocal quality to the notes, allowing the instrument to sing and convey emotions in a way that words cannot.' - Eric Clapton", duration: 10000 },
-      { textt: "'Vibrato is the magic touch that transforms a plain note into a captivating melody. It adds a natural ebb and flow that captures the listener's attention and draws them in.' - Sarah Brightman", duration: 10000 }
+      { textt: "Apply vibrato to string instruments like violin, cello, or guitar to add expressiveness to sustained notes.", duration: 10000 },
+      { textt: "Employ vibrato on woodwind and brass instruments to emulate the natural expressiveness of human voice and string instruments.", duration: 10000 },
+      { textt: "Practice control over the depth and speed of vibrato to suit the musical context. A gentle vibrato may be suitable for subtle embellishments, while a more pronounced vibrato can be used for dramatic and expressive moment", duration: 10000 }
     ];
 
     function rotateText() {

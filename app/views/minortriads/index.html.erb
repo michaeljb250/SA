@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minor Harmony Player</title>
+</head>
+<style>
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #282c34;
+    color: #61dafb;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#harmonySelect {
+    margin-bottom: 20px;
+}
+
+#noteButtons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #61dafb;
+    color: #282c34;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: #282c34;
+    color: #61dafb;
+}
+
+button:hover {
+    background-color: #4fa3d1;
+}
+
+#playButton,
+#stopButton {
+    background-color: #61dafb;
+    color: #282c34;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#stopButton {
+    background-color: #e74c3c;
+}
+
+#playButton:hover,
+#stopButton:hover {
+    background-color: #4fa3d1;
+}
+
+/* Add this to your styles.css file */
+button.active {
+    background-color: #282c34;
+    color: red;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+</style>
+<body>
+    <h1>Minor Harmony Player</h1>
+    <p>
+    A minor triad is a three-note chord consisting of a root note, a minor third interval above the root, and a perfect fifth interval above the root.
+    </p>
+    <p>
+    In simpler terms, if you start with a note, lets say C, you would add the note three semitones above it (E♭ in the case of a minor third) and then add the note seven semitones above the original note (G). Put them together, and you have a C minor triad (C-E♭-G). The combination of these intervals gives the triad a "minor" sound, which is often described as more somber or melancholic compared to a major triad.
+    In summary, a minor triad consists of a root note, a minor third, and a perfect fifth, and it has a distinct, somewhat subdued quality in comparison to a major triad.
+    </p>
+    <div data-controller ="minortriads">
+
+    <!-- Dropdown for selecting harmonies -->
+    <label for="harmonySelect">Select Harmony:</label>
+    <select id="harmonySelect">
+        <option value="0">C Minor</option>
+        <option value="1">F Minor</option>
+        <option value="2">G Minor</option>
+        <option value="3">A Minor</option>
+      <option value="4">D Minor</option>
+        <option value="5">E Minor</option>
+        <option value="6">B Minor</option>
+        <option value="7">Db Minor</option>
+      <option value="8">Eb Minor</option>
+        <option value="9">Ab Minor</option>
+        <option value="10">Bb Minor</option>
+    </select>
+
+    <!-- Buttons for notes -->
+    <div id="noteButtons">
+        <!-- Note buttons will be dynamically added here -->
+    </div>
+
+    <button id="playButton">Play Harmony</button>
+    <button id="stopButton">Stop</button>
+</body>
+</html>

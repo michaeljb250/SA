@@ -14,16 +14,16 @@ export default class extends Controller {
     };
 
     const drumGrid = [
-      { sound: "kick", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "hi-hat", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "snare", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "tom", steps: [false, false, false, false, false, false, false, false] },
-      { sound: "crash", steps: [false, false, false, false, false, false, false, false] },
+      { sound: "kick", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ] },
+      { sound: "hi-hat", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "snare", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "tom", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
+      { sound: "crash", steps: [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false] },
       // Add more drums here if needed
     ];
 
     const numDrums = drumGrid.length;
-    const numSteps = 8;
+    const numSteps = 16;
     let isPlaying = false;
     let currentStep = 0;
     let tempo = 120;
@@ -125,7 +125,7 @@ export default class extends Controller {
     updateTempoDisplay();
     });
 
-    const textArray = [  "The kick and snare drum patterns form the core of rock drumming.",  "Cymbals play a crucial role in rock drumming, providing accents, crashes, and washes of sound. Experiment with different cymbal patterns, including rides, crashes, and hi-hat patterns, to add texture and variation to your compositions.",  "Explore incorporating offbeat accents, ghost notes, and displaced snare hits to create syncopated patterns that enhance the groove and make the drums stand out."];
+    const textArray = [  "The kick is normally the foundation and the pulse, played on the 1st and 3rd note",  "Hi-Hats are also important, try playing them on all notes and adapt from there.",  "Explore incorporating offbeat accents, ghost notes, and displaced snare hits to create syncopated patterns that enhance the groove and make the drums stand out."];
 
     let index = 0;
     let textIndex = 0;

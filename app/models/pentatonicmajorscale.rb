@@ -1,0 +1,2 @@
+class Pentatonicmajorscale < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Majorpentatonic < ApplicationRecord
+end

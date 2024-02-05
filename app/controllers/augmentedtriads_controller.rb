@@ -1,0 +1,2 @@
+class AugmentedtriadsController < ApplicationController
+end

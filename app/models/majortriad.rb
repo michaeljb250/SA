@@ -1,0 +1,2 @@
+class Majortriad < ApplicationRecord
+end

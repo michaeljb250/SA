@@ -1,0 +1,2 @@
+class MajorpentatonicsController < ApplicationController
+end

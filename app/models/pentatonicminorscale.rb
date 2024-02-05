@@ -1,0 +1,2 @@
+class Pentatonicminorscale < ApplicationRecord
+end

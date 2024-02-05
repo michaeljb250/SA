@@ -1,3 +1,6 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <style>
 $bg-size-end: 4.2;
 $dur: 0.7s;
@@ -155,6 +158,30 @@ canvas {
    padding-top: 6px;
 }
 
+@media (max-width: 768px) {
+  /* Add responsive styles here */
+  .third {
+    padding: 1.5rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+.first {
+  overflow: hidden; /* Add overflow property */
+}
+
+.third {
+  overflow: hidden; /* Add overflow property */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  #textt-box {
+    display: none;
+  }
 
 </style>
 
@@ -165,11 +192,8 @@ canvas {
   <button><%= link_to "Spatial Audio", spatialaudios_path %></button>
   </div>
   <div class="righto">
-  <button><%= link_to "Games", compressors_path %></button>
+  <button><%= link_to "Theory", theories_path %></button>
   <button><%= link_to "Synth Labs", synthlabs_path %></button>
-  </div>
-  <div class="righto">
-  <button><%= link_to "Live Mix", livemixs_path %></button>
   </div>
   <div data-controller="waver">
   <div class="redder">
@@ -209,7 +233,7 @@ canvas {
   Level 2
 <div class="second">
   <div class="third">
-  <%= link_to "High-Mid-Low", eqs_path, class: "second" %>
+  <%= link_to "Equalisation", eqs_path, class: "second" %>
   </div>
   <div id="textt-box">
   <p id="textt"></p>
@@ -229,10 +253,7 @@ canvas {
   Level 4
 <div class="second">
 <div class="third">
-<%= link_to "Reverb", reverbs_path, class: "second" %>
-</div>
-<div class="third">
-<%= link_to "Freeverb", freeverbs_path, class: "second" %>
+<%= link_to "Reverb", freeverbs_path, class: "second" %>
 </div>
 <div class="third">
 <%= link_to "JCVerb", jcverbs_path, class: "second" %>

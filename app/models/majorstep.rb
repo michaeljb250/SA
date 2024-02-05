@@ -1,0 +1,2 @@
+class Majorstep < ApplicationRecord
+end

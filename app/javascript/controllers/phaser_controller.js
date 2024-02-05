@@ -78,9 +78,9 @@ export default class extends Controller {
     const textt = document.getElementById("textt");
     let indexx = 0;
     const textArrayy = [
-      { textt: "'A well-placed phaser can take a simple riff or chord progression and make it come alive. It's the secret weapon for adding depth, dimension, and an otherworldly vibe to your guitar sound.' - The Edge", duration: 10000 },
-      { textt: "'Phaser adds a touch of psychedelic charm to your sound. It's the secret ingredient for creating lush, swirling textures that can transport the listener to a different sonic realm.' - David Gilmour", duration: 10000 },
-      { textt: "'Phaser is the spice that can transform a dry, static sound into a dynamic, evolving masterpiece. It adds motion, excitement, and a touch of magic to any instrument or voice.' - Adrian Belew", duration: 10000 }
+      { textt: "A well-placed phaser can add an otherworldly vibe to your sound", duration: 10000 },
+      { textt: "Phaser can transform a dry, static sound into a dynamic audio track.", duration: 10000 },
+      { textt: "", duration: 10000 }
     ];
 
     function rotateText() {

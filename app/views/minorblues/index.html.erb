@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minor Blues Scale Grid Music</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #282c34;
+  color: #61dafb;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grid-item {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #61dafb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item.active {
+  background-color: #bada55 !important;
+}
+
+/* Different colors for notes */
+.note-C {
+  background-color: #FFD700;
+}
+
+.note-D {
+  background-color: #FFA500;
+}
+
+.note-E {
+  background-color: #FF6347;
+}
+
+.note-F {
+  background-color: #8A2BE2;
+}
+
+.note-G {
+  background-color: #00CED1;
+}
+
+.note-A {
+  background-color: #3CB371;
+}
+
+.note-B {
+  background-color: #9370DB;
+}
+
+.note-C2 {
+  background-color: #FFD700;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #282c34;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #282c34;
+  color: #61dafb;
+}
+
+label {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+input {
+  margin-top: 10px;
+  width: 300px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  background: #61dafb;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 5px;
+}
+
+input:hover {
+  opacity: 1;
+}
+
+span {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+#scale-selector {
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #61dafb;
+  border-radius: 5px;
+  background-color: #282c34;
+  color: #61dafb;
+  outline: none;
+}
+
+#scale-selector:hover {
+  border-color: #282c34;
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: black;
+  margin-bottom: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+</style>
+
+<body>
+
+  <h2>Minor Blues Scale</h2>
+  <p>
+  The minor blues scale is another important musical scale, particularly prominent in blues and jazz genres. Like the major scale, it consists of seven notes, and its distinct pattern of intervals creates a characteristic sound associated with blues music. The pattern of intervals for a minor blues scale is:
+  </p>
+
+  <p>
+  Whole - Half - Whole - Whole - Half - Whole - Whole
+</p>
+
+<p>
+  Let's illustrate this with the A minor blues scale:
+</p>
+
+<p>
+  A - C - D - Eb - E - G - A
+</p>
+
+<p>
+  Starting from A, you move up by a whole step to C, a half step to D, another whole step to Eb, a whole step to E, a half step to G, and finally, a whole step to return to A.
+</p>
+
+<p>
+  The minor blues scale is renowned for its soulful and expressive quality. It is often used to evoke a melancholic or introspective mood in music. Just as with the major scale, each note in the minor blues scale is assigned a degree, providing a framework for creating chords, progressions, and melodies within the context of Western music theory.
+</p>
+
+  <div data-controller="minorblues">
+
+    <section id="instructions">
+      <select id="scale-selector">
+        <option value="C">C Minor Blues </option>
+        <option value="D">D Minor Blues </option>
+        <option value="E">E Minor Blues </option>
+        <option value="F">F Minor Blues </option>
+        <option value="G">G Minor Blues </option>
+        <option value="A">A Minor Blues </option>
+        <option value="B">B Minor Blues </option>
+      </select>
+    </section>
+
+    <div id="grid-container"></div>
+    <button id="play-btn">Play</button>
+    <button id="stop-btn">Stop</button>
+    <label for="bpm-slider">BPM:</label>
+    <input type="range" id="bpm-slider" min="60" max="200" value="120">
+    <span id="bpm-value">120 BPM</span>
+  </div>
+
+</body>
+
+</html>

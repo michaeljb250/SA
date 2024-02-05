@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Music</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */ /* Try removing or adjusting this line */
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #282c34;
+  color: #61dafb;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grid-item {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #61dafb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item.active {
+  background-color: #bada55 !important;
+}
+
+/* Different colors for notes */
+.note-C { background-color: #FFD700; }
+.note-D { background-color: #FFA500; }
+.note-E { background-color: #FF6347; }
+.note-F { background-color: #8A2BE2; }
+.note-G { background-color: #00CED1; }
+.note-A { background-color: #3CB371; }
+.note-B { background-color: #9370DB; }
+.note-C2 { background-color: #FFD700; } /* higher octave C */
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #282c34;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #282c34;
+  color: #61dafb;
+}
+
+label {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+input {
+  margin-top: 10px;
+  width: 300px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  background: #61dafb;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 5px;
+}
+
+input:hover {
+  opacity: 1;
+}
+
+span {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+/* Add this to your existing CSS styles */
+
+#scale-selector {
+font-size: 16px;
+padding: 10px;
+border: 2px solid #61dafb;
+border-radius: 5px;
+background-color: #282c34;
+color: #61dafb;
+outline: none;
+}
+
+#scale-selector:hover {
+border-color: #282c34;
+background-color: #61dafb;
+color: #282c34;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+</style>
+<body>
+
+<h2>Major Pentatonic</h2>
+<p>The major pentatonic scale is a musical scale that consists of five notes, selected from the major scale. It has a happy and bright sound and is widely used in various musical genres, including pop, country, and blues. The major pentatonic scale is created by taking the 1st, 2nd, 3rd, 5th, and 6th notes of the major scale.
+For example, lets consider the C major scale:
+</p>
+
+<p>
+C - D - E - F - G - A - B
+</p>
+
+<p>
+To create the C major pentatonic scale, we take the 1st (C), 2nd (D), 3rd (E), 5th (G), and 6th (A) notes:
+</p>
+
+<p>
+C - D - E - G - A
+</p>
+
+<p>
+So, the C major pentatonic scale is C, D, E, G, A.
+</p>
+
+<p>
+The major pentatonic scale is known for its versatility and simplicity, making it a popular choice for melodies, solos, and improvisation. It's often considered a "safe" scale because its notes are generally consonant and pleasing to the ear.
+</p>
+
+<div data-controller="majorpentatonic">
+
+<section id="instructions">
+  <select id="scale-selector">
+    <option value="C">C Major </option>
+    <option value="D">D Major </option>
+    <option value="E">E Major </option>
+    <option value="F">F Major </option>
+    <option value="G">G Major </option>
+    <option value="A">A Major </option>
+    <option value="B">B Major </option>
+  </select>
+</section>
+
+  <div id="grid-container"></div>
+  <button id="play-btn">Play</button>
+  <button id="stop-btn">Stop</button>
+  <label for="bpm-slider">BPM:</label>
+  <input type="range" id="bpm-slider" min="60" max="200" value="120">
+  <span id="bpm-value">120 BPM</span>
+</div>
+</body>
+</html>

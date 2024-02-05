@@ -1,0 +1,2 @@
+class Diminishedtriad < ApplicationRecord
+end
