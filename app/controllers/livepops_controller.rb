@@ -1,2 +1,2 @@
-class LivepopController < ApplicationController
+class LivepopsController < ApplicationController
 end
