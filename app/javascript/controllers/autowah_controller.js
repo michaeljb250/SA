@@ -78,11 +78,11 @@ autoWahButton.addEventListener('click', () => {
     if (autowahOn) {
         player.disconnect();
         player.connect(autowah);
-        autoWahButton.textContent = 'AutoWah On';
+        autoWahButton.textContent = 'Turn Autowah Off';
     } else {
         player.disconnect();
         player.toDestination();
-        autoWahButton.textContent = 'AutoWah Off';
+        autoWahButton.textContent = 'Turn Autowah on';
     }
 });
 

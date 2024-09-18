@@ -47,7 +47,7 @@ export default class extends Controller {
 
     type();
 
-    const player = new Tone.Player("https://tonejs.github.io/audio/berklee/gong_1.mp3").toDestination();
+    const player = new Tone.Player("/tunes/OS_ES_90_electric_guitar_melody_love_Am.wav").toDestination();
 
     // Create chorus effect
     const chorus = new Tone.Chorus({

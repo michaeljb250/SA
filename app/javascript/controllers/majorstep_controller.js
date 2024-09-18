@@ -25,9 +25,9 @@ cMajorScale.forEach((note, index) => {
 
     // Set spacing based on interval
     if (interval === "W") {
-        button.style.marginRight = "1em";
+        button.style.marginRight = "2em";
     } else if (interval === "H") {
-        button.style.marginRight = "0.5em";
+        button.style.marginRight = "1em";
     }
 
     button.addEventListener("click", () => playNote(note));

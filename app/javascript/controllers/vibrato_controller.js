@@ -49,7 +49,7 @@ export default class extends Controller {
 
 
 // Load audio file
-const audioFile = "/tunes/SO_CM_130_vocal_pase_choir_Gmin.wav";
+const audioFile = "/tunes/SNS_SD_110_guitar_bubble_boy_Bmaj(1).wav";
 const player = new Tone.Player(audioFile).toDestination();
 
 // Define buttons
