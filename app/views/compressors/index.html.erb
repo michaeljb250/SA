@@ -11,10 +11,14 @@ h1 {
   text-align: center;
   color: #333333;
 }
+h1 {
+  padding-top: 50px;
+ }
 
-div {
+#sam {
   margin-bottom: 30px;
 }
+
 
 label {
   display: block;
@@ -65,6 +69,7 @@ button:active {
   padding-bottom: 40px;
 }
 
+
 </style>
 <head>
   <title>Audio Player with Multiband Compressor</title>
@@ -72,21 +77,24 @@ button:active {
 </head>
 <body>
 <div data-controller="compressor">
+<div id="textr">
  <h1 id="text"></h1>
+ </div>
   <div class="button-container">
     <button id="back-btn">Back</button>
     <button id="next-btn">Next</button>
   </div>
-  <div>
-  <div>
+
+  <div id="sam">
+  <div id="sam">
     <label for="lowSlider">Low Band Threshold:</label>
     <input type="range" id="lowSlider" min="-60" max="0" step="0.1" value="-24">
   </div>
-  <div>
+  <div  id="sam">
     <label for="midSlider">Mid Band Threshold:</label>
     <input type="range" id="midSlider" min="-60" max="0" step="0.1" value="-18">
   </div>
-  <div>
+  <div id="sam">
     <label for="highSlider">High Band Threshold:</label>
     <input type="range" id="highSlider" min="-60" max="0" step="0.1" value="-12">
   </div>

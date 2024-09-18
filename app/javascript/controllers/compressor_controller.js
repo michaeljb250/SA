@@ -5,7 +5,7 @@ import * as Tone from 'tone'
 export default class extends Controller {
   connect() {
 
-    const audioFile = "https://tonejs.github.io/audio/berklee/gong_1.mp3";
+    const audioFile = "/tunes/OS_MLW_85_electric_guitar_chords_sunset_Cm.wav";
 
 const player = new Tone.Player(audioFile).toDestination();
 player.autostart = false;

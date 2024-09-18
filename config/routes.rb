@@ -13,7 +13,6 @@ Rails.application.routes.draw do
              resources :tremelos
               resources :eqs
                resources :compressors
-                resources :jcverbs
                  resources :adsrs
                   resources :limiters
                    resources :phasers
@@ -63,6 +62,7 @@ Rails.application.routes.draw do
                                                             resources :majorsteps
                                                              resources :bluescales
                                                               resources :minorblues
+                                                               resources :abouts
 
 
 

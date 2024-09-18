@@ -98,7 +98,7 @@ export default class extends Controller {
       synth.envelope.release = parseFloat(releaseSlider.value);
     });
 
-    const textt = document.getElementById("textt");
+    const textt = document.getElementById("texttt");
     let indexx = 0;
     const textArrayy = [
       { textt: "The ADSR envelope is what gives sounds their shape and character, allowing you to create everything from punchy, percussive hits to long, evolving pads", duration: 10000 },
