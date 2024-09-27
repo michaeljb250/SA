@@ -162,17 +162,52 @@ a:hover {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 600px) {
+  /* Styles for mobile devices */
+  .righto {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+
+  button {
+    height: 22px;
+    font-size: 15px;
+  }
+
+  /* Add more styles as needed for smaller screens */
+}
+
+@media only screen and (min-width: 601px) {
+  /* Styles for larger screens */
+  .righto {
+    justify-content: space-between;
+  }
+
+  /* Add more styles as needed for larger screens */
+}
+
+
 </style>
 
 <body>
 <div data-controller="home">
 <div class="righto">
-<button><%= link_to "Drum Labs", drumlabs_path %></button>
-<button><%= link_to "Home", homes_path %></button>
+<%= link_to drumlabs_path, class: 'btn-link' do %>
+  <button>Drum Labs</button>
+<% end %>
+<%= link_to theories_path, class: 'btn-link' do %>
+  <button>Theory</button>
+<% end %>
 </div>
+
 <div class="righto">
-<button><%= link_to "Theory", theories_path %></button>
-<button><%= link_to "Synth Labs", synthlabs_path %></button>
+<%= link_to homes_path, class: 'btn-link' do %>
+  <button>Home</button>
+<% end %>
+<%= link_to synthlabs_path, class: 'btn-link' do %>
+  <button>Synth Labs</button>
+<% end %>
 </div>
 <div class="first">
   Spatial Audio

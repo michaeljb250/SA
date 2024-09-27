@@ -1,44 +1,58 @@
-<head>
-<title>Typing Animation</title>
-<link rel="stylesheet">
-</head>
-<body>
 <style>
-  /* CSS for the keyboard element */
+/* Base keyboard layout */
+#keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#keyboard button {
+  width: 50px;
+  height: 100px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  transition: all 0.1s ease;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#keyboard button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
+  background-color: #ddd;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
   #keyboard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    font-family: 'Courier New', Courier, monospace;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 10px;
   }
 
-  /* CSS for the keyboard buttons */
   #keyboard button {
-    width: 50px;
-    height: 100px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #eee;
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    transition: all 0.1s ease;
-    font-family: 'Courier New', Courier, monospace;
+    width: 40px;
+    height: 80px;
+    font-size: 16px;
   }
 
-  /* CSS for the pressed keyboard buttons */
-  #keyboard button:active {
-    transform: translateY(2px);
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
-    background-color: #ddd;
-    font-family: 'Courier New', Courier, monospace;
+  /* Limit the number of keys shown */
+  #keyboard button:nth-child(n+7) {
+    display: none;
   }
+}
 
-  input[type="range"] {
+input[type="range"] {
   -webkit-appearance: none;
   height: 8px;
   background-color: #ddd;
@@ -68,60 +82,65 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #texttt-box {
- // border: 1px solid black;
   width: 300px;
   height: 80px;
   position: fixed;
   left: 80%;
-  top: 30%;
+  top: 0%;
   transform: translateX(-50%);
 }
 
 #texttt {
   font-size: 16px;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 250px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   font-family: 'Courier New', Courier, monospace;
 }
 
-
+/* Additional media queries for smaller screens */
+@media (max-width: 400px) {
+  #keyboard button {
+    width: 30px;
+    height: 60px;
+    font-size: 14px;
+  }
+}
 </style>
-<script src="https://unpkg.com/@hotwired/stimulus@3.0.0/dist/stimulus.umd.js"></script>
-   <div class="conter">
-    <h1 id="text"></h1>
-    <div class="button-container">
-      <button id="back-btn">Back</button>
-      <button id="next-btn">Next</button>
-    </div>
-    <div id="texttt-box">
-      <p id="texttt"></p>
-    </div>
-  <div id="synth-container">
-    <div data-controller="adsr">
-    <div id="keyboard">
-    </div>
-  </div>
-  <div id="controls">
-    <div class="control">
-      <label>Attack:</label>
-      <input type="range" min="0" max="1" step="0.01" value="0" id="attack-slider">
-    </div>
-    <div class="control">
-      <label>Decay:</label>
-      <input type="range" min="0" max="1" step="0.01" value="0.5" id="decay-slider">
-    </div>
-    <div class="control">
-      <label>Sustain:</label>
-      <input type="range" min="0" max="1" step="0.01" value="0.5" id="sustain-slider">
-    </div>
-    <div class="control">
-      <label>Release:</label>
-      <input type="range" min="0" max="1" step="0.01" value="0.5" id="release-slider">
-    </div>
-  </div>
-  </div>
- </div>
+<div class="conter">
+<h1 id="text"></h1>
+<div class="button-container">
+  <button id="back-btn">Back</button>
+  <button id="next-btn">Next</button>
+</div>
+<div id="texttt-box">
+  <p id="texttt"></p>
+</div>
+<div id="synth-container">
+<div data-controller="adsr">
+<div id="keyboard">
+</div>
+</div>
+<div id="controls">
+<div class="control">
+  <label>Attack:</label>
+  <input type="range" min="0" max="1" step="0.01" value="0" id="attack-slider">
+</div>
+<div class="control">
+  <label>Decay:</label>
+  <input type="range" min="0" max="1" step="0.01" value="0.5" id="decay-slider">
+</div>
+<div class="control">
+  <label>Sustain:</label>
+  <input type="range" min="0" max="1" step="0.01" value="0.5" id="sustain-slider">
+</div>
+<div class="control">
+  <label>Release:</label>
+  <input type="range" min="0" max="1" step="0.01" value="0.5" id="release-slider">
+</div>
+</div>
+</div>
+</div>
 </div>
 </body>
