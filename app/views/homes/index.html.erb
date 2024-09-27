@@ -1,6 +1,3 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
 <style>
 $bg-size-end: 4.2;
 $dur: 0.7s;
@@ -16,6 +13,7 @@ html { box-sizing: border-box; height: 100%; font-size: 10px; } *, *::before, *:
 #   font-size: 60px;
 #   color: black;
 #   background-color: white;
+
 # }
 
 # .second {
@@ -66,6 +64,28 @@ html { box-sizing: border-box; height: 100%; font-size: 10px; } *, *::before, *:
 #     box-shadow: none;
 #   }
 # }
+
+@media (max-width: 768px) {
+  /* Add responsive styles here */
+  .third {
+    padding: 1.5rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+.first {
+  overflow: hidden; /* Add overflow property */
+}
+
+.third {
+  overflow: hidden; /* Add overflow property */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+
 
 .smasb
 
@@ -127,7 +147,7 @@ button:active {
 .textt {
   font-size: 16px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   font-family: 'Courier New', Courier, monospace;
@@ -140,6 +160,39 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Styles for mobile devices */
+  .righto {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+
+  button {
+    height: 22px;
+    font-size: 15px;
+  }
+
+.third {
+  font-size: 1.2rem;
+}
+
+p {
+  color: white;
+}
+
+  /* Add more styles as needed for smaller screens */
+}
+
+@media only screen and (min-width: 601px) {
+  /* Styles for larger screens */
+  .righto {
+    justify-content: space-between;
+  }
+
+  /* Add more styles as needed for larger screens */
 }
 
 canvas {
@@ -155,81 +208,39 @@ canvas {
   display: flex;
    padding-bottom: 1px;
    font-size: 40px;
-   padding-top: 6px;
+   padding-top: 20px;
 }
-
-@media (max-width: 768px) {
-  /* Add responsive styles here */
-  .third {
-    padding: 1.5rem 1.5rem; /* Adjust padding for smaller screens */
-  }
-}
-
-.first {
-  overflow: hidden; /* Add overflow property */
-}
-
-.third {
-  overflow: hidden; /* Add overflow property */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 1rem;
-  margin: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  #textt-box {
-    display: none;
-  }
-
-  .footer {
-    background: #F4F4F4;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    padding: 0px 50px;
-    color: rgba(0,0,0,0.3);
-  }
-  .footer-links {
-    display: flex;
-    align-items: center;
-  }
-  .footer-links a {
-    color: black;
-    opacity: 0.15;
-    text-decoration: none;
-    font-size: 12px;
-    padding: 0px 10px;
-  }
-  .footer-links a:hover {
-    opacity: 1;
-  }
-  .footer .fa-heart {
-    color: #D23333;
-  }
-
-
-
 
 </style>
 
+
+
 <body>
 <div data-controller="home">
- <div class="righto">
-  <button><%= link_to "Drum Labs", drumlabs_path %></button>
-  <button><%= link_to "Spatial Audio", spatialaudios_path %></button>
-  </div>
-  <div class="righto">
-  <button><%= link_to "Theory", theories_path %></button>
-  <button><%= link_to "Synth Labs", synthlabs_path %></button>
-  </div>
+<div class="righto">
+<%= link_to drumlabs_path, class: 'btn-link' do %>
+  <button>Drum Labs</button>
+<% end %>
+<%= link_to spatialaudios_path, class: 'btn-link' do %>
+  <button>Spatial Audio</button>
+<% end %>
+</div>
+
+<div class="righto">
+<%= link_to theories_path, class: 'btn-link' do %>
+  <button>Theory</button>
+<% end %>
+<%= link_to synthlabs_path, class: 'btn-link' do %>
+  <button>Synth Labs</button>
+<% end %>
+</div>
   <div data-controller="waver">
   <div class="redder">
   <div id="playButton">&#9658;</div>
   <div id="pauseButton"> &#9724;</div>
   </div>
+
+
 
   <canvas id="waveformCanvas"></canvas>
   </div>
@@ -254,7 +265,7 @@ canvas {
 <%= link_to "Delay", delays_path, class: "second" %>
 </div>
 <div class="third">
-<%= link_to "PingPong Delay", pings_path, class: "second" %>
+<%= link_to "Ping Delay", pings_path, class: "second" %>
 </div>
 <div class="third">
 <%= link_to "Compression", compressors_path, class: "second" %>
@@ -312,9 +323,55 @@ canvas {
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+  </div>
+  </div>
+  </div>
+
+  <footer class="bg-dark text-white pt-4 footer-courier">
+  <div class="container">
+      <div class="row">
+          <!-- Column 1: About -->
+          <div class="col-md-4">
+              <h5>About Us</h5>
+              <p>We are a leading company in providing innovative solutions to real-world problems. Join us on our journey!</p>
+          </div>
+          <!-- Column 2: Quick Links -->
+          <div class="col-md-4">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="#" class="text-white">Home</a></li>
+                  <li><a href="#" class="text-white">About</a></li>
+                  <li><a href="#" class="text-white">Serv</a></li>
+                  <li><a href="#" class="text-white">Contact</a></li>
+              </ul>
+          </div>
+          <!-- Column 3: Social Icons -->
+          <div class="col-md-4">
+              <h5>Follow Us</h5>
+              <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+          </div>
+      </div>
+      <hr class="bg-white">
+      <div class="row">
+          <div class="col text-center">
+              <p class="mb-0">&copy; 2024 Your Company. All rights reserved.</p>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 </body>

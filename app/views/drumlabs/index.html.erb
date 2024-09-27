@@ -13,6 +13,7 @@ html { box-sizing: border-box; height: 100%; font-size: 10px; } *, *::before, *:
 #   font-size: 60px;
 #   color: black;
 #   background-color: white;
+
 # }
 
 # .second {
@@ -63,6 +64,28 @@ html { box-sizing: border-box; height: 100%; font-size: 10px; } *, *::before, *:
 #     box-shadow: none;
 #   }
 # }
+
+@media (max-width: 768px) {
+  /* Add responsive styles here */
+  .third {
+    padding: 1.5rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+.first {
+  overflow: hidden; /* Add overflow property */
+}
+
+.third {
+  overflow: hidden; /* Add overflow property */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+
 
 .smasb
 
@@ -118,7 +141,6 @@ button:active {
  justify-content: space-between;
   padding-bottom: 20px;
   background: white;
-  text-decoration: none;
 }
 
 
@@ -130,6 +152,7 @@ button:active {
   transition: opacity 1s ease-in-out;
   font-family: 'Courier New', Courier, monospace;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -139,54 +162,70 @@ a:hover {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  /* Add responsive styles here */
-  .third {
-    padding: 1.5rem 1.5rem; /* Adjust padding for smaller screens */
+@media only screen and (max-width: 600px) {
+  /* Styles for mobile devices */
+  .righto {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;
   }
+
+  button {
+    height: 22px;
+    font-size: 15px;
+  }
+
+  /* Add more styles as needed for smaller screens */
 }
 
-.first {
-  overflow: hidden; /* Add overflow property */
-}
+@media only screen and (min-width: 601px) {
+  /* Styles for larger screens */
+  .righto {
+    justify-content: space-between;
+  }
 
-.third {
-  overflow: hidden; /* Add overflow property */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 1rem;
-  margin: 0.5rem;
+  /* Add more styles as needed for larger screens */
 }
 
 
 </style>
 
+
 <body>
 <div data-controller="home">
 <div class="righto">
-<button><%= link_to "Home", homes_path %></button>
-<button><%= link_to "Spatial Audio", spatialaudios_path %></button>
+<%= link_to theories_path, class: 'btn-link' do %>
+ <button>Theory</button>
+<% end %>
+<%= link_to spatialaudios_path, class: 'btn-link' do %>
+ <button>Spatial Audio</button>
+<% end %>
 </div>
+
+
 <div class="righto">
-<button><%= link_to "Theory", theories_path %></button>
-<button><%= link_to "Synth Labs", synthlabs_path %></button>
+<%= link_to homes_path, class: 'btn-link' do %>
+ <button>Home</button>
+<% end %>
+<%= link_to synthlabs_path, class: 'btn-link' do %>
+ <button>Synth Labs</button>
+<% end %>
 </div>
 <div class="first">
-  Drum Labs
+ Drum Labs
 <div class="second">
-  <div class="third">
-  <%= link_to "Jazz", jazzdrums_path, class: "second" %>
-  </div>
-  <div class="third">
-  <%= link_to "Rock", rockdrums_path, class: "second" %>
-  </div>
-  <div class="third">
-  <%= link_to "Pop", popdrums_path, class: "second" %>
-  </div>
-  <div class="third">
-  <%= link_to "Hip-Hop", hiphopdrums_path, class: "second" %>
-  </div>
+ <div class="third">
+ <%= link_to "Jazz", jazzdrums_path, class: "second" %>
+ </div>
+ <div class="third">
+ <%= link_to "Rock", rockdrums_path, class: "second" %>
+ </div>
+ <div class="third">
+ <%= link_to "Pop", popdrums_path, class: "second" %>
+ </div>
+ <div class="third">
+ <%= link_to "Hip-Hop", hiphopdrums_path, class: "second" %>
+ </div>
 </div>
 </div>
 </body>
