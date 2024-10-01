@@ -56,7 +56,7 @@ window.addEventListener('mouseup', (e) => {
 
 // Load audio file with Howler.js
 const sound = new Howl({
-  src: ['/tunes/jazz1.wav'],
+  src: ['https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazz1.wav'],
   spatial: true,
 });
 
@@ -117,7 +117,7 @@ window.addEventListener('mouseup', (e) => {
 
 // Load audio file with Howler.js
 const sound2 = new Howl({
-  src: ['/tunes/jazz2.wav'],
+  src: ['https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazz2.wav'],
   spatial: true,
 });
 
@@ -178,7 +178,7 @@ window.addEventListener('mouseup', (e) => {
 
 // Load audio file with Howler.js
 const sound3 = new Howl({
-  src: ['/tunes/jazz3.wav'],
+  src: ['https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazz3.wav'],
   spatial: true,
 });
 
