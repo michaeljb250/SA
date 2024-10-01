@@ -48,7 +48,7 @@ export default class extends Controller {
     type();
 
  // Create a new Tone.js Player instance
-const player = new Tone.Player("/tunes/tribal.mp3").toDestination();
+const player = new Tone.Player("https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/SNS_SD_110_guitar_bubble_boy_Bmaj+(1).wav").toDestination();
 
 // Create a new Tone.js Panner instance
 const panner = new Tone.Panner(0).toDestination();

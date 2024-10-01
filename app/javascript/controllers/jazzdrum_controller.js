@@ -206,11 +206,11 @@ import * as Tone from 'tone';
 export default class extends Controller {
   connect() {
     const drumSounds = {
-      "hi-hat": "/tunes/jazzhat.wav",
-      "tom": "/tunes/jazztom.wav",
-      "bass": "/tunes/jazzbass.wav",
-      "crash": "/tunes/jazzcrash.wav",
-      "ride": "/tunes/jazzride.wav",
+      "hi-hat": "https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazzhat.wav",
+      "tom": "https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazztom.wav",
+      "bass": "https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazzbass.wav",
+      "crash": "https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazzcrash.wav",
+      "ride": "https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazzride.wav",
     };
 
     const drumGrid = [
