@@ -19,7 +19,7 @@
 
 .slideshow {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -29,12 +29,12 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 150px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation-duration: 30s;
+  animation-duration: 10s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
@@ -46,12 +46,12 @@
 
 .slide:nth-child(2) {
   animation-name: fade-2;
-  animation-delay: 30s;
+  animation-delay: 10s;
 }
 
 .slide:nth-child(3) {
   animation-name: fade-3;
-  animation-delay: 50s;
+  animation-delay: 20s;
 }
 
 @keyframes fade-1 {
@@ -273,6 +273,11 @@
 #marker-5:active {
   cursor: grabbing;
 }
+
+#start-button,
+#stop-button {
+  display: none; /* Initially hidden */
+}
 </style>
 <body>
 <div data-controller="jazz">
@@ -289,7 +294,7 @@
 </div>
   <div id="visualizer4">
   <div class="slideshow">
-  <span class="slide">There are many ways to space the instruments in a jazz mix, here are our tips.</span>
+  <span class="slide">There are many ways to space the instruments in a jazz mix, here are our tips. Click start in the top left when it appears.</span>
   <span class="slide">Pay attention to the lead instrument, If there is a primary solo instrument, such as a trumpet or saxophone, make sure it stands out in the mix. </span>
   <span class="slide">The drums are typically centered in the mix to anchor the rhythm section. </span>
     <span class="slide"> The piano can be panned slightly left or right, depending on the arrangement and the role it plays in the composition. Consider panning it opposite to any guitar or horn parts to avoid masking.</span>
