@@ -186,7 +186,7 @@
 
 .slideshow {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -196,12 +196,12 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 150px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation-duration: 30s;
+  animation-duration: 10s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
@@ -213,12 +213,12 @@
 
 .slide:nth-child(2) {
   animation-name: fade-2;
-  animation-delay: 30s;
+  animation-delay: 10s;
 }
 
 .slide:nth-child(3) {
   animation-name: fade-3;
-  animation-delay: 50s;
+  animation-delay: 20s;
 }
 
 @keyframes fade-1 {
@@ -277,6 +277,11 @@
   font-size: 24px;
   font-family: 'Courier New', Courier, monospace;
   white-space: pre-wrap;
+}
+
+#start-button,
+#stop-button {
+  display: none; /* Initially hidden */
 }
 </style>
 <body>
