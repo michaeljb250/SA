@@ -351,21 +351,20 @@ canvas {
           <!-- Column 1: About -->
           <div class="col-md-4">
               <h5>About Us</h5>
-              <p>We are a leading company in providing innovative solutions to real-world problems. Join us on our journey!</p>
+              <p>We make interactive lessons for learning music!  <%= link_to "Learn More >", abouts_path %></p>
           </div>
           <!-- Column 2: Quick Links -->
           <div class="col-md-4">
               <h5>Quick Links</h5>
               <ul class="list-unstyled">
-                  <li><a href="#" class="text-white">Home</a></li>
-                  <li><a href="#" class="text-white">About</a></li>
-                  <li><a href="#" class="text-white">Serv</a></li>
-                  <li><a href="#" class="text-white">Contact</a></li>
+                  <li><%= link_to "Home", homes_path %></li>
+                  <li><%= link_to "About", abouts_path %></li>
+                  <li><%= link_to "Contact", homes_path %></li>
               </ul>
           </div>
           <!-- Column 3: Social Icons -->
           <div class="col-md-4">
-              <h5>Follow Us</h5>
+              <h5>We're not on socials yet! We will be soon...</h5>
               <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
               <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
               <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>

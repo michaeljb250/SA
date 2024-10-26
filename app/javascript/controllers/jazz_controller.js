@@ -171,7 +171,42 @@ export default class extends Controller {
       });
     });
 
+    window.addEventListener('mouseup', () => {
+      if (isDragging) {
+        marker.style.cursor = 'grab';
+        isDragging = false;
+      }
+    });
 
+    // Touch events
+    marker.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      const touch = e.touches[0];
+      offsetX = touch.clientX - x;
+      offsetY = touch.clientY - y;
+      marker.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('touchmove', (e) => {
+      if (isDragging) {
+        const touch = e.touches[0];
+        const newX = touch.clientX - visualizers[index].offsetLeft - offsetX;
+        const newY = touch.clientY - visualizers[index].offsetTop - offsetY;
+        marker.style.transform = `translate(${newX}px, ${newY}px)`;
+        markerPositions[index] = { x: newX, y: newY };
+
+        const soundX = (newX / visualizers[index].clientWidth) * 2 - 1;
+        const soundY = (newY / visualizers[index].clientHeight) * 2 - 1;
+        sounds[index].pos(soundX, soundY, -1);
+      }
+    });
+
+    window.addEventListener('touchend', () => {
+      if (isDragging) {
+        marker.style.cursor = 'grab';
+        isDragging = false;
+      }
+    });
 
     setTimeout(() => {
       startButton.style.display = 'block'; // Show the start button after 9 seconds
