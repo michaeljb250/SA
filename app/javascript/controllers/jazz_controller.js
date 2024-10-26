@@ -19,14 +19,17 @@
 //       new Howl({
 //         src: ['https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazz1.wav'],
 //         spatial: true,
+//         preload: true, // Preload the audio
 //       }),
 //       new Howl({
 //         src: ['https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazz2.wav'],
 //         spatial: true,
+//         preload: true, // Preload the audio
 //       }),
 //       new Howl({
 //         src: ['https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazz3.wav'],
 //         spatial: true,
+//         preload: true, // Preload the audio
 //       }),
 //     ];
 
@@ -77,15 +80,58 @@
 //       });
 //     });
 
-//     // Set up listener for start button
+//     window.addEventListener('mouseup', () => {
+//       if (isDragging) {
+//         marker.style.cursor = 'grab';
+//         isDragging = false;
+//       }
+//     });
+
+//     // Touch events
+//     marker.addEventListener('touchstart', (e) => {
+//       isDragging = true;
+//       const touch = e.touches[0];
+//       offsetX = touch.clientX - x;
+//       offsetY = touch.clientY - y;
+//       marker.style.cursor = 'grabbing';
+//     });
+
+//     window.addEventListener('touchmove', (e) => {
+//       if (isDragging) {
+//         const touch = e.touches[0];
+//         const newX = touch.clientX - visualizers[index].offsetLeft - offsetX;
+//         const newY = touch.clientY - visualizers[index].offsetTop - offsetY;
+//         marker.style.transform = `translate(${newX}px, ${newY}px)`;
+//         markerPositions[index] = { x: newX, y: newY };
+
+//         const soundX = (newX / visualizers[index].clientWidth) * 2 - 1;
+//         const soundY = (newY / visualizers[index].clientHeight) * 2 - 1;
+//         sounds[index].pos(soundX, soundY, -1);
+//       }
+//     });
+
+//     window.addEventListener('touchend', () => {
+//       if (isDragging) {
+//         marker.style.cursor = 'grab';
+//         isDragging = false;
+//       }
+//     });
+
+//     setTimeout(() => {
+//       startButton.style.display = 'block'; // Show the start button after 9 seconds
+//       stopButton.style.display = 'block';  // Show the stop button after 9 seconds
+//     }, 9000);
+
+
 //     startButton.addEventListener('click', () => {
 //       sounds.forEach(sound => sound.play());
 //     });
 
-//     // Set up listener for stop button
+
 //     stopButton.addEventListener('click', () => {
 //       sounds.forEach(sound => sound.stop());
 //     });
+
 //   }
 // }
 
@@ -95,7 +141,6 @@ import { Howl, Howler } from 'howler';
 // Connects to data-controller="jazz"
 export default class extends Controller {
   connect() {
-    // Get references to DOM elements
     const startButton = document.querySelector('#start-button');
     const stopButton = document.querySelector('#stop-button');
     const marker1 = document.querySelector('#marker');
@@ -105,26 +150,24 @@ export default class extends Controller {
     const marker3 = document.querySelector('#marker-3');
     const visualizer3 = document.querySelector('#visualizer-3');
 
-    // Create audio sounds with Howler.js
     const sounds = [
       new Howl({
         src: ['https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazz1.wav'],
         spatial: true,
-        preload: true, // Preload the audio
+        preload: true,
       }),
       new Howl({
         src: ['https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazz2.wav'],
         spatial: true,
-        preload: true, // Preload the audio
+        preload: true,
       }),
       new Howl({
         src: ['https://soundacademybucket.s3.ap-southeast-2.amazonaws.com/jazz3.wav'],
         spatial: true,
-        preload: true, // Preload the audio
+        preload: true,
       }),
     ];
 
-    // Initialize markers positions
     const markers = [marker1, marker2, marker3];
     const visualizers = [visualizer1, visualizer2, visualizer3];
     const markerPositions = [
@@ -134,14 +177,15 @@ export default class extends Controller {
     ];
 
     markers.forEach((marker, index) => {
-      const { x, y } = markerPositions[index];
-      marker.style.transform = `translate(${x}px, ${y}px)`;
-
-      // Marker movement logic
       let isDragging = false;
       let offsetX = 0;
       let offsetY = 0;
 
+      const visualizer = visualizers[index];
+      const { x, y } = markerPositions[index];
+      marker.style.transform = `translate(${x}px, ${y}px)`;
+
+      // Desktop events
       marker.addEventListener('mousedown', (e) => {
         isDragging = true;
         offsetX = e.clientX - x;
@@ -151,15 +195,14 @@ export default class extends Controller {
 
       window.addEventListener('mousemove', (e) => {
         if (isDragging) {
-          const newX = e.clientX - visualizers[index].offsetLeft - offsetX;
-          const newY = e.clientY - visualizers[index].offsetTop - offsetY;
+          const newX = e.clientX - visualizer.offsetLeft - offsetX;
+          const newY = e.clientY - visualizer.offsetTop - offsetY;
           marker.style.transform = `translate(${newX}px, ${newY}px)`;
           markerPositions[index] = { x: newX, y: newY };
 
-          // Set spatial position of sound based on marker position
-          const soundX = (newX / visualizers[index].clientWidth) * 2 - 1;
-          const soundY = (newY / visualizers[index].clientHeight) * 2 - 1;
-          sounds[index].pos(soundX, soundY, -1); // Set z-coordinate to -1 for 2D sound
+          const soundX = (newX / visualizer.clientWidth) * 2 - 1;
+          const soundY = (newY / visualizer.clientHeight) * 2 - 1;
+          sounds[index].pos(soundX, soundY, -1);
         }
       });
 
@@ -169,59 +212,49 @@ export default class extends Controller {
           isDragging = false;
         }
       });
-    });
 
-    window.addEventListener('mouseup', () => {
-      if (isDragging) {
-        marker.style.cursor = 'grab';
-        isDragging = false;
-      }
-    });
-
-    // Touch events
-    marker.addEventListener('touchstart', (e) => {
-      isDragging = true;
-      const touch = e.touches[0];
-      offsetX = touch.clientX - x;
-      offsetY = touch.clientY - y;
-      marker.style.cursor = 'grabbing';
-    });
-
-    window.addEventListener('touchmove', (e) => {
-      if (isDragging) {
+      // Mobile touch events
+      marker.addEventListener('touchstart', (e) => {
+        isDragging = true;
         const touch = e.touches[0];
-        const newX = touch.clientX - visualizers[index].offsetLeft - offsetX;
-        const newY = touch.clientY - visualizers[index].offsetTop - offsetY;
-        marker.style.transform = `translate(${newX}px, ${newY}px)`;
-        markerPositions[index] = { x: newX, y: newY };
+        offsetX = touch.clientX - x;
+        offsetY = touch.clientY - y;
+        marker.style.cursor = 'grabbing';
+      });
 
-        const soundX = (newX / visualizers[index].clientWidth) * 2 - 1;
-        const soundY = (newY / visualizers[index].clientHeight) * 2 - 1;
-        sounds[index].pos(soundX, soundY, -1);
-      }
-    });
+      window.addEventListener('touchmove', (e) => {
+        if (isDragging) {
+          const touch = e.touches[0];
+          const newX = touch.clientX - visualizer.offsetLeft - offsetX;
+          const newY = touch.clientY - visualizer.offsetTop - offsetY;
+          marker.style.transform = `translate(${newX}px, ${newY}px)`;
+          markerPositions[index] = { x: newX, y: newY };
 
-    window.addEventListener('touchend', () => {
-      if (isDragging) {
-        marker.style.cursor = 'grab';
-        isDragging = false;
-      }
+          const soundX = (newX / visualizer.clientWidth) * 2 - 1;
+          const soundY = (newY / visualizer.clientHeight) * 2 - 1;
+          sounds[index].pos(soundX, soundY, -1);
+        }
+      });
+
+      window.addEventListener('touchend', () => {
+        if (isDragging) {
+          marker.style.cursor = 'grab';
+          isDragging = false;
+        }
+      });
     });
 
     setTimeout(() => {
-      startButton.style.display = 'block'; // Show the start button after 9 seconds
-      stopButton.style.display = 'block';  // Show the stop button after 9 seconds
+      startButton.style.display = 'block';
+      stopButton.style.display = 'block';
     }, 9000);
-
 
     startButton.addEventListener('click', () => {
       sounds.forEach(sound => sound.play());
     });
 
-
     stopButton.addEventListener('click', () => {
       sounds.forEach(sound => sound.stop());
     });
-
   }
 }
