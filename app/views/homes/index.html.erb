@@ -42,7 +42,8 @@ html { box-sizing: border-box; height: 100%; font-size: 10px; } *, *::before, *:
 
 
 .container {
-  min-width: 100%;
+ width: 100%;
+ overflow-x: hidden;
 }
 
 
@@ -141,6 +142,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     padding-bottom: 0px;
+    width: 100%;
   }
 
   button {
@@ -161,7 +163,28 @@ p {
   color: white;
 }
 
-  /* Add more styles as needed for smaller screens */
+media only screen and (max-width: 400px) {
+  /* Styles for mobile devices */
+  .righto {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;
+    width: 100%;
+  }
+
+  button {
+
+    font-size: 7px;
+  }
+
+.third {
+  font-size: 1.2rem;
+  padding-right: 20%;
+}
+
+.textt-box {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 601px) {
@@ -192,6 +215,8 @@ width: 100%;
    font-size: 40px;
    padding-top: 20px;
 }
+
+
 
 </style>
 
