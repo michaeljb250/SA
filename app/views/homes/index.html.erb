@@ -68,7 +68,7 @@ footer {
 button {
 
 width: 300px;
-  --border: 5px;    /* the border width */
+  --border: 10px;    /* the border width */
   --slant: 0.7em;   /* control the slanted corners */
   --color: #37E8FC; /* the color */
 
@@ -155,16 +155,19 @@ a:hover {
 
 .third {
   font-size: 1.2rem;
-}
 
+}
 .textt-box {
     display: none;
   }
+
+    #textt-box {
+      display: none; /* Hide the element */
+    }
+
 }
 
-p {
-  color: white;
-}
+
 
 media only screen and (max-width: 400px) {
   /* Styles for mobile devices */
@@ -185,9 +188,7 @@ media only screen and (max-width: 400px) {
   padding-right: 20%;
 }
 
-.textt-box {
-    display: none;
-  }
+
 }
 
 @media only screen and (min-width: 601px) {
@@ -229,19 +230,19 @@ width: 100%;
 <div data-controller="home">
 <div class="righto">
 <%= link_to drumlabs_path, class: 'btn-link' do %>
-  <button>Drum Labs</button>
+  <button>DRUM LABS</button>
 <% end %>
 <%= link_to spatialaudios_path, class: 'btn-link' do %>
-  <button>Spatial Audio</button>
+  <button>SPATIAL AUDIO</button>
 <% end %>
 </div>
 
 <div class="righto">
 <%= link_to theories_path, class: 'btn-link' do %>
-  <button>Theory</button>
+  <button>THEORY</button>
 <% end %>
 <%= link_to synthlabs_path, class: 'btn-link' do %>
-  <button>Synth Labs</button>
+  <button>RYTHM</button>
 <% end %>
 </div>
   <div data-controller="waver">
@@ -255,7 +256,7 @@ width: 100%;
   <canvas id="waveformCanvas"></canvas>
   </div>
 <div class="first">
-  FUNDAMENTALS
+  PRODUCTION
 <div class="second">
   <div class="third">
   <%= link_to "Volume", vols_path, class: "second" %>
@@ -277,15 +278,15 @@ width: 100%;
 <div class="third">
 <%= link_to "Ping Delay", pings_path, class: "second" %>
 </div>
-<div class="third">
-<%= link_to "Compression", compressors_path, class: "second" %>
-  </div>
 </div>
   <div class="first">
   Level 2
 <div class="second">
   <div class="third">
   <%= link_to "Equalisation", eqs_path, class: "second" %>
+  </div>
+  <div class="third">
+  <%= link_to "Synth Labs", synthlabs_path, class: "second" %>
   </div>
   <div id="textt-box">
   <p id="textt"></p>

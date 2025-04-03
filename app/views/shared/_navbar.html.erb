@@ -1,59 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RH29JV6H75"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RH29JV6H75');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RH29JV6H75"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-RH29JV6H75');
+  </script>
   <title>Your App</title>
   <style>
     /* Navbar Styles */
-
     nav {
       width: 100%;
       z-index: 1;
+      position: relative; /* Make the navbar a relative container */
+      padding: 10px 20px; /* Adjust padding for spacing */
+      background-color: white;
+    }
+
+    /* Back link styles */
+    .back-link {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      text-decoration: none;
+      color: black; /* Keep text color black */
+      font-size: 20px; /* Adjust icon size */
+      padding: 10px;
+      cursor: pointer;
+      background-color: transparent; /* Remove the background */
+      border: none; /* Remove any borders */
+      transition: color 0.3s; /* Smooth transition for color */
+    }
+
+    .back-link:hover {
+      color: #ffd700; /* Change icon color on hover */
     }
 
 
+    /* Navbar link styles */
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
-      background-color: white;
-      padding: 10px 0;
-      text-color: black;
+      margin: 0;
     }
 
     nav ul li {
       margin: 0 15px;
-      transition: transform 0.3s; /* Add transition for smooth animation */
+      transition: transform 0.3s;
     }
 
     nav ul li:hover {
-      transform: scale(1.1); /* Apply scale transformation on hover */
+      transform: scale(1.1);
     }
 
     nav ul li a {
       text-decoration: none;
       color: black;
-      transition: color 0.3s; /* Add transition for color change */
+      transition: color 0.3s;
     }
 
     nav ul li:hover a {
-      color: #ffd700 ; /* Change color on hover */
+      color: #ffd700;
     }
-
-
   </style>
 </head>
 <body>
 
 <nav>
+  <!-- Back button on the left side -->
+  <a href="javascript:void(0)" class="back-link" onclick="window.location.href = document.referrer;"><i class="fas fa-arrow-left"></i></a>
+
+  <!-- Navbar links centered -->
   <ul>
     <li><%= link_to "Home", homes_path %></li>
     <li><%= link_to "About", abouts_path %></li>

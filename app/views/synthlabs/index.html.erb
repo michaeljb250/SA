@@ -18,6 +18,14 @@
   margin-top: 50px;
 }
 
+@media (max-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for a grid layout */
+    gap: 10px;
+    justify-items: center; /* Center items in each cell */
+  }
+}
 .synth-controls {
   margin: 10px;
 }
