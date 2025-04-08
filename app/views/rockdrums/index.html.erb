@@ -17,6 +17,7 @@
   white-space: pre-wrap;
 }
 
+
 .button-container {
   display: flex;
   margin-top: 20px;
@@ -196,6 +197,25 @@ label {
   padding: 5px;
   font-size: 14px;
   border-radius: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+
+.audio-player {
+    display: none;
+  }
+
+    #audio-player {
+      display: none; /* Hide the element */
+    }
+  #text {
+    display: block;
+    width: 100%; /* or a fixed width if desired */
+    min-height: 5em; /* enough for at least 2 lines of text */
+    white-space: pre-wrap; /* allows wrapping and preserves spacing */
+    word-wrap: break-word; /* breaks long words if needed */
+  }
+
 }
 </style>
 <body>

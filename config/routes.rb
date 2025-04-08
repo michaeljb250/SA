@@ -64,6 +64,7 @@ Rails.application.routes.draw do
                                                               resources :minorblues
                                                                resources :abouts
                                                                 resources :contacts
+                                                                resources :access_codes
 
 
 
